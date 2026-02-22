@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Öğr. Üyesi {{ site.name }} | Akademik Profil</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">SD.</a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Hakkımda</a></li>
+                    <li><a href="#cv" class="nav-link">Özgeçmiş</a></li>
+                    <li><a href="#yayinlarim" class="nav-link">Yayınlarım</a></li>
+                    <li><a href="#yazilarim" class="nav-link">Yazılarım</a></li>
+                    <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="greeting">{{ site.greeting }}</span>
+                        <h1 class="name">{{ site.name }}</h1>
+                        <h2 class="title">{{ site.title }}</h2>
+                        <p class="bio-summary">{{ site.bio_summary }}</p>
+
+                        <div class="social-links">
+                            {% for link in site.social_links %}
+                            {% if link.platform == "twitter" %}
+                            <a href="{{ link.url }}" class="social-icon" target="_blank"
+                                rel="noopener noreferrer" title="{{ link.label }}" aria-label="{{ link.label }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                                </svg>
+                            </a>
+                            {% else %}
+                            <a href="{{ link.url }}" class="social-icon" target="_blank"
+                                rel="noopener noreferrer" aria-label="{{ link.label }}">
+                                <i class="{{ link.icon }}"></i>
+                            </a>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="hero-image-container">
+                        <div class="image-wrapper">
+                            <img src="/profile.jpeg" alt="Dr. {{ site.name }}" class="profile-img" id="profileImage"
+                                onerror="this.src='https://ui-avatars.com/api/?name=Sadettin+Demirel&size=400&background=1e293b&color=ffffff'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Full Bio Section -->
+        <section id="about" class="about section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hakkımda</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-content">
+                    {% for paragraph in site.about_paragraphs %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="cv section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Özgeçmiş</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="cv-content">
+                    <div class="cv-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="cv-details">
+                            <h3>Eğitim &amp; Akademik Kariyer</h3>
+                            <ul class="timeline">
+                                {% for edu in site.education %}
+                                <li>
+                                    <span class="date">{{ edu.year }}</span>
+                                    <h4>{{ edu.degree }}</h4>
+                                    <p>{{ edu.institution }}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="yayinlarim" class="publications section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Yayınlarım</h2>
+                    <div class="divider"></div>
+                </div>
+                {% for category in publications.categories %}
+                <div class="pub-category">
+                    <h3 class="category-title"><i class="{{ category.icon }}"></i> {{ category.title }}</h3>
+                    <div class="publications-list">
+                        {% for pub in category.items %}
+                        <div class="pub-card">
+                            <h3 class="pub-title">{{ pub.title }}</h3>
+                            <p class="pub-authors">{{ pub.authors }}</p>
+                            <p class="pub-venue">{{ pub.venue }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Writings Section -->
+        <section id="yazilarim" class="writings section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Yazılarım</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="writings-content">
+                    {% for writing in site.writings %}
+                    <div class="writing-promo">
+                        <div class="writing-icon">
+                            <i class="{{ writing.icon }}"></i>
+                        </div>
+                        <h3>{{ writing.name }}</h3>
+                        <p>{{ writing.description }}</p>
+                        <a href="{{ writing.url }}" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline mt-auto">
+                            {{ writing.button_text }} <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="iletisim" class="contact section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">İletişim</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="contact-content">
+                    <p style="text-align: center; margin-bottom: 2rem;">
+                        Benimle iletişime geçmek için aşağıdaki formu doldurabilir veya <a
+                            href="mailto:{{ site.email }}" class="inline-link">e-posta adresim</a>
+                        üzerinden bana ulaşabilirsiniz.
+                    </p>
+                    <form action="https://formsubmit.co/{{ site.email }}" method="POST" class="contact-form" id="contactForm">
+                        <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
+                        <!-- Honeypot: botlar bu alanı doldurur, insanlar görmez -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" name="name" class="form-control" required
+                                placeholder="Adınız Soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta Adresiniz</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="E-posta adresiniz">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" class="form-control" required
+                                placeholder="Mesajınızı buraya yazın..."></textarea>
+                        </div>
+                        <!-- Matematik CAPTCHA -->
+                        <div class="form-group">
+                            <label for="captcha"><i class="fas fa-shield-alt"></i> Güvenlik Sorusu: <strong id="captchaQuestion"></strong></label>
+                            <input type="number" id="captcha" class="form-control" required
+                                placeholder="Cevabınızı yazın">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+            </div>
+            <div class="footer-social">
+                {% for link in site.social_links %}
+                {% if link.platform == "twitter" %}
+                <a href="{{ link.url }}" target="_blank" title="{{ link.label }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"
+                        style="position: relative; top: 2px;">
+                        <path fill="currentColor"
+                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                    </svg>
+                </a>
+                {% elif link.platform != "email" %}
+                <a href="{{ link.url }}" target="_blank"><i class="{{ link.icon }}"></i></a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="/script.js"></script>
+
+    <!-- Netlify Identity redirect -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

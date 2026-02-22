@@ -1,0 +1,84 @@
+{
+    "name": "Sadettin Demirel",
+    "title": "Dr. Öğr. Üyesi, Gazetecilik",
+    "greeting": "Merhaba, ben",
+    "email": "sadettin.demirel@uskudar.edu.tr",
+    "bio_summary": "Üsküdar Üniversitesi Gazetecilik Bölümü'nde Dr. Öğr. Üyesi olarak görev yapmaktayım. Yeni medya, veri gazeteciliği, programlamalı sosyal bilimler ve metin madenciliği alanlarında akademik çalışmalar yürütüyorum.",
+    "about_paragraphs": [
+        "Sadettin Demirel, lisans eğitimini Kadir Has Üniversitesi Halkla İlişkiler ve Tanıtım Bölümü'nde, 2016 yılında tamamlamıştır. İlk yüksek lisans derecesini, Kadir Has Üniversitesi Yeni Medya Bölümü'nde 2018 yılında almıştır.",
+        "2019 yılında, İsveç Enstitüsü bursiyeri olarak, Gothenburg Üniversitesi'nde Araştırmacı Gazetecilik alanında ikinci yüksek lisans eğitimini tamamlamıştır. 2023 yılında, İstanbul Üniversitesi Gazetecilik Doktora Ana Bilim Dalı'nda \u201cTwitter'daki Haberlerde Duygular ve Kullanıcı Etkileşimleri Arasındaki İlişkinin Çözümlenmesi: Çok Yöntemli Bir Çalışma\u201d başlıklı araştırmasıyla doktor unvanı almıştır.",
+        "Yeni medya, metin madenciliği, programlamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
+        "Sivil toplum faaliyetlerine de aktif bir katılım gösteren Demirel, Türkiye'de veri okuryazarlığını teşvik etmek, veri gazeteciliği ve açık veri faaliyetlerini desteklemek amacıyla kurulan İstanbul merkezli Veri Okuryazarlığı Derneği'nin (VOYD) kurucusu ve yönetim kurulu üyesi olarak çalışmalarını sürdürmektedir."
+    ],
+    "education": [
+        {
+            "year": "2023",
+            "degree": "Doktora, Gazetecilik",
+            "institution": "İstanbul Üniversitesi"
+        },
+        {
+            "year": "2019",
+            "degree": "Yüksek Lisans, Araştırmacı Gazetecilik",
+            "institution": "Gothenburg Üniversitesi"
+        },
+        {
+            "year": "2018",
+            "degree": "Yüksek Lisans, Yeni Medya",
+            "institution": "Kadir Has Üniversitesi"
+        },
+        {
+            "year": "2016",
+            "degree": "Lisans, Halkla İlişkiler ve Tanıtım",
+            "institution": "Kadir Has Üniversitesi"
+        }
+    ],
+    "social_links": [
+        {
+            "platform": "email",
+            "url": "mailto:sadettin.demirel@uskudar.edu.tr",
+            "icon": "fas fa-envelope",
+            "label": "Email"
+        },
+        {
+            "platform": "twitter",
+            "url": "https://x.com/demirelsadettin",
+            "icon": "x-twitter",
+            "label": "X (Twitter)"
+        },
+        {
+            "platform": "linkedin",
+            "url": "https://www.linkedin.com/in/sadettin-demirel/",
+            "icon": "fab fa-linkedin-in",
+            "label": "LinkedIn"
+        },
+        {
+            "platform": "medium",
+            "url": "https://medium.com/verijurnali",
+            "icon": "fab fa-medium-m",
+            "label": "Medium"
+        }
+    ],
+    "writings": [
+        {
+            "name": "Medium",
+            "description": "Veri gazeteciliği ve açık veri üzerine güncel yazılarım ve analizlerim.",
+            "url": "https://medium.com/verijurnali",
+            "icon": "fab fa-medium",
+            "button_text": "Veri Jurnali"
+        },
+        {
+            "name": "NewsLabTurkey",
+            "description": "NewsLabTurkey platformundaki gazetecilik ve medya üzerine yazılarım.",
+            "url": "https://www.newslabturkey.org/author/sadettindemirel/",
+            "icon": "fas fa-newspaper",
+            "button_text": "Yazılarıma Git"
+        },
+        {
+            "name": "VOYD",
+            "description": "Veri Okuryazarlığı Derneği blogundaki değerlendirmelerim ve çalışmalarım.",
+            "url": "https://voyd.org.tr/author/sadettin/",
+            "icon": "fas fa-chart-line",
+            "button_text": "Yazılarıma Git"
+        }
+    ]
+}

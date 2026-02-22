@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: "tr"
+
+media_folder: "src"
+public_folder: "/"
+
+collections:
+  - name: "site"
+    label: "Site Ayarları"
+    files:
+      - name: "site_settings"
+        label: "Kişisel Bilgiler & Genel Ayarlar"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Ad Soyad", name: "name", widget: "string" }
+          - { label: "Unvan", name: "title", widget: "string" }
+          - { label: "Karşılama Metni", name: "greeting", widget: "string", default: "Merhaba, ben" }
+          - { label: "E-posta", name: "email", widget: "string" }
+          - { label: "Kısa Biyografi (Hero)", name: "bio_summary", widget: "text" }
+          - label: "Hakkımda Paragrafları"
+            name: "about_paragraphs"
+            widget: "list"
+            field: { label: "Paragraf", name: "paragraph", widget: "text" }
+          - label: "Eğitim Bilgileri"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Yıl", name: "year", widget: "string" }
+              - { label: "Derece", name: "degree", widget: "string" }
+              - { label: "Kurum", name: "institution", widget: "string" }
+          - label: "Sosyal Medya Linkleri"
+            name: "social_links"
+            widget: "list"
+            fields:
+              - { label: "Platform", name: "platform", widget: "select", options: ["email", "twitter", "linkedin", "medium", "github", "youtube"] }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-linkedin-in" }
+              - { label: "Etiket", name: "label", widget: "string" }
+          - label: "Yazı Platformları"
+            name: "writings"
+            widget: "list"
+            fields:
+              - { label: "Platform Adı", name: "name", widget: "string" }
+              - { label: "Açıklama", name: "description", widget: "text" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-medium" }
+              - { label: "Buton Metni", name: "button_text", widget: "string" }
+
+  - name: "publications"
+    label: "Yayınlar"
+    files:
+      - name: "publications_data"
+        label: "Tüm Yayınlar"
+        file: "src/_data/publications.json"
+        fields:
+          - label: "Yayın Kategorileri"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Kategori Başlığı", name: "title", widget: "string" }
+              - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fas fa-globe" }
+              - label: "Yayınlar"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Başlık", name: "title", widget: "string" }
+                  - { label: "Yazarlar", name: "authors", widget: "string" }
+                  - { label: "Yayın Yeri / Dergi", name: "venue", widget: "string" }
