@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} — Dr. {{ site.name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/" class="logo">SD.</a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="/#home" class="nav-link">Hakkımda</a></li>
+                    <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
+                    <li><a href="/#yayinlarim" class="nav-link">Yayınlarım</a></li>
+                    <li><a href="/#yazilarim" class="nav-link">Yazılarım</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="blog-post section">
+            <div class="container">
+                <div class="post-header">
+                    {% if thumbnail %}
+                    <img src="{{ thumbnail }}" alt="{{ title }}" class="post-hero-image">
+                    {% endif %}
+                    <h1 class="post-title">{{ title }}</h1>
+                    <div class="post-meta">
+                        <span><i class="fas fa-calendar-alt"></i> {{ date | trDate }}</span>
+                        <span><i class="fas fa-user"></i> {{ author }}</span>
+                        {% if tags_display %}
+                        <span><i class="fas fa-tags"></i> {{ tags_display }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="post-content">
+                    {{ content | safe }}
+                </div>
+                <div class="post-footer">
+                    <a href="/blog/" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Tüm Yazılar</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

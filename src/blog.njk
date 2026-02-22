@@ -1,0 +1,74 @@
+---
+layout: false
+permalink: /blog/
+---
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Dr. {{ site.name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/" class="logo">SD.</a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="/#home" class="nav-link">Hakkımda</a></li>
+                    <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
+                    <li><a href="/#yayinlarim" class="nav-link">Yayınlarım</a></li>
+                    <li><a href="/#yazilarim" class="nav-link">Yazılarım</a></li>
+                    <li><a href="/blog/" class="nav-link active">Blog</a></li>
+                    <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-listing section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Blog</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="blog-grid">
+                    {% for post in collections.blog %}
+                    <a href="{{ post.url }}" class="blog-card">
+                        {% if post.data.thumbnail %}
+                        <div class="blog-card-image">
+                            <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy">
+                        </div>
+                        {% endif %}
+                        <div class="blog-card-body">
+                            <span class="blog-card-date">{{ post.data.date | trDate }}</span>
+                            <h3 class="blog-card-title">{{ post.data.title }}</h3>
+                            <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
+                            <span class="blog-card-read">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
