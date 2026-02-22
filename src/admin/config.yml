@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sadettindemirel/academic-site
   branch: main
 
 locale: "tr"
