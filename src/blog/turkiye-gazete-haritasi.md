@@ -1,10 +1,13 @@
 ---
-title: "Türkiye'de Yerel — Bölgesel — Yaygın Gazetelerin ve Haber Sitelerinin Haritasını Çıkarmak"
+title: Türkiye'de Yerel — Bölgesel — Yaygın Gazetelerin ve Haber Sitelerinin
+  Haritasını Çıkarmak
 date: 2025-10-20
-author: "Sadettin Demirel"
-excerpt: "Ülkemizde kaç tane gazete ve internet haber sitesi var? Bunların kaç tanesi yerel, bölgesel ve yaygın düzeyde habercilik yapıyor? Bu yazıda bu sorulara cevap veriyor ve haritasını çıkarıyorum."
-thumbnail: ""
-tags_display: "Veri Gazeteciliği, Veri Görselleştirme"
+author: Sadettin Demirel
+excerpt: Ülkemizde kaç tane gazete ve internet haber sitesi var? Bunların kaç
+  tanesi yerel, bölgesel ve yaygın düzeyde habercilik yapıyor? Bu yazıda bu
+  sorulara cevap veriyor ve haritasını çıkarıyorum.
+thumbnail: https://miro.medium.com/v2/resize:fit:4800/format:webp/1*uFDQuuSH1AfyrTSnt2OFxg.png
+tags_display: Veri Gazeteciliği, Veri Görselleştirme
 ---
 
 Ülkemizde kaç tane gazete ve internet haber sitesi var? Bunların kaç tanesi yerel, bölgesel ve yaygın düzeyde habercilik yapıyor? Ve bu haber kuruluşları hangi illerde yoğunluk gösteriyor? Bu yazıda bu sorulara cevap veriyorum ve bu kuruluşların haritasını çıkarıyorum.
