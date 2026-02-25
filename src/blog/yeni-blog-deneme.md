@@ -7,3 +7,5 @@ thumbnail: https://images.unsplash.com/photo-1618305520147-8af78f99a3f5?q=80&w=1
 tags_display: deneme
 ---
 Bu bir denemedir, paniğe kapılmayın
+
+`<div class="flourish-embed flourish-photo-slider" data-src="visualisation/26107276"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26107276/thumbnail" width="100%" alt="photo-slider visualization" /></noscript></div>`
