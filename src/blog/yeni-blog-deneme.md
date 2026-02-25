@@ -6,6 +6,6 @@ excerpt: Bu bir denemedir
 thumbnail: https://images.unsplash.com/photo-1618305520147-8af78f99a3f5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags_display: deneme
 ---
-Bu bir denemedir, paniğe kapılmayın
+Bu bir denemedir, paniğe kapılmayınü
 
 `<div class="flourish-embed flourish-photo-slider" data-src="visualisation/26107276"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/26107276/thumbnail" width="100%" alt="photo-slider visualization" /></noscript></div>`
