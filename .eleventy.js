@@ -1,4 +1,10 @@
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
+    // Enable HTML inside Markdown (for embeds, iframes, scripts)
+    const md = markdownIt({ html: true, breaks: true, linkify: true });
+    eleventyConfig.setLibrary("md", md);
+
     // Copy static assets to output
     eleventyConfig.addPassthroughCopy("src/style.css");
     eleventyConfig.addPassthroughCopy("src/script.js");
