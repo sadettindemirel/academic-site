@@ -5,7 +5,95 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // =========================================================================
+    // Dark Mode Toggle
+    // =========================================================================
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    if (themeToggle) {
+        updateThemeIcon(savedTheme);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        });
+    }
+
+    function updateThemeIcon(theme) {
+        if (!themeToggle) return;
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+
+    // =========================================================================
+    // Language Toggle (TR/EN) — only on main page
+    // =========================================================================
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('lang') || 'tr';
+
+    if (langToggle) {
+        // Initialize
+        updateLangLabel(currentLang);
+        if (currentLang === 'en') {
+            applyLanguage('en');
+        }
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'tr' ? 'en' : 'tr';
+            localStorage.setItem('lang', currentLang);
+            updateLangLabel(currentLang);
+            applyLanguage(currentLang);
+        });
+    }
+
+    function updateLangLabel(lang) {
+        if (!langToggle) return;
+        const label = langToggle.querySelector('.lang-label');
+        // Show the OTHER language as the action
+        label.textContent = lang === 'tr' ? 'EN' : 'TR';
+    }
+
+    function applyLanguage(lang) {
+        // Update text content for elements with data-tr and data-en
+        document.querySelectorAll('[data-tr][data-en]').forEach(el => {
+            const text = el.getAttribute(`data-${lang}`);
+            if (text) {
+                // If contains HTML (like links), use innerHTML
+                if (text.includes('<')) {
+                    el.innerHTML = text;
+                } else {
+                    el.textContent = text;
+                }
+            }
+        });
+
+        // Update placeholders
+        document.querySelectorAll(`[data-${lang}-placeholder]`).forEach(el => {
+            el.placeholder = el.getAttribute(`data-${lang}-placeholder`);
+        });
+
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+    }
+
+    // =========================================================================
     // Header Scroll Effect
+    // =========================================================================
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -15,7 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // =========================================================================
     // Mobile Menu Toggle
+    // =========================================================================
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navbar = document.querySelector('.navbar');
     const mobileIcon = document.querySelector('.mobile-menu-btn i');
@@ -38,15 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (navbar.classList.contains('active')) {
+            if (navbar && navbar.classList.contains('active')) {
                 navbar.classList.remove('active');
-                mobileIcon.classList.remove('fa-times');
-                mobileIcon.classList.add('fa-bars');
+                if (mobileIcon) {
+                    mobileIcon.classList.remove('fa-times');
+                    mobileIcon.classList.add('fa-bars');
+                }
             }
         });
     });
 
+    // =========================================================================
     // Active Link Highlighting based on Scroll Position
+    // =========================================================================
     const sections = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
@@ -54,8 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
             if (scrollY >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
@@ -69,7 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Smooth Scrolling API for Anchor Links
+    // =========================================================================
+    // Smooth Scrolling for Anchor Links
+    // =========================================================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -80,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // Account for fixed header height
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
@@ -92,7 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Math CAPTCHA for contact form
+    // =========================================================================
+    // Math CAPTCHA for Contact Form
+    // =========================================================================
     const captchaQuestion = document.getElementById('captchaQuestion');
     const contactForm = document.getElementById('contactForm');
 
@@ -106,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const userAnswer = parseInt(document.getElementById('captcha').value, 10);
             if (userAnswer !== captchaAnswer) {
                 e.preventDefault();
-                // Show error
                 const captchaInput = document.getElementById('captcha');
                 captchaInput.style.borderColor = '#e74c3c';
                 captchaInput.style.boxShadow = '0 0 0 3px rgba(231, 76, 60, 0.15)';
@@ -124,4 +218,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-

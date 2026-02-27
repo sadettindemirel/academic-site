@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,6 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -29,16 +28,23 @@
             <a href="#home" class="logo">SD.</a>
             <nav class="navbar">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Hakkımda</a></li>
-                    <li><a href="#cv" class="nav-link">Özgeçmiş</a></li>
-                    <li><a href="#yayinlarim" class="nav-link">Yayınlarım</a></li>
-                    <li><a href="#yazilarim" class="nav-link">Yazılarım</a></li>
+                    <li><a href="#home" class="nav-link active" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                    <li><a href="#cv" class="nav-link" data-tr="Özgeçmiş" data-en="CV">Özgeçmiş</a></li>
+                    <li><a href="#yayinlarim" class="nav-link" data-tr="Yayınlarım" data-en="Publications">Yayınlarım</a></li>
                     <li><a href="/blog/" class="nav-link">Blog</a></li>
-                    <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+                    <li><a href="#iletisim" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class="header-actions">
+                <button class="toggle-btn" id="langToggle" title="Switch language" aria-label="Switch language">
+                    <span class="lang-label">EN</span>
+                </button>
+                <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -49,10 +55,10 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <span class="greeting">{{ site.greeting }}</span>
+                        <span class="greeting" data-tr="{{ site.greeting }}" data-en="{{ site.greeting_en }}">{{ site.greeting }}</span>
                         <h1 class="name">{{ site.name }}</h1>
-                        <h2 class="title">{{ site.title }}</h2>
-                        <p class="bio-summary">{{ site.bio_summary }}</p>
+                        <h2 class="title" data-tr="{{ site.title }}" data-en="{{ site.title_en }}">{{ site.title }}</h2>
+                        <p class="bio-summary" data-tr="{{ site.bio_summary }}" data-en="{{ site.bio_summary_en }}">{{ site.bio_summary }}</p>
 
                         <div class="social-links">
                             {% for link in site.social_links %}
@@ -89,12 +95,12 @@
         <section id="about" class="about section bg-light">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Hakkımda</h2>
+                    <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="about-content">
-                    {% for paragraph in site.about_paragraphs %}
-                    <p>{{ paragraph }}</p>
+                    {% for i in range(0, site.about_paragraphs | length) %}
+                    <p data-tr="{{ site.about_paragraphs[i] }}" data-en="{{ site.about_paragraphs_en[i] }}">{{ site.about_paragraphs[i] }}</p>
                     {% endfor %}
                 </div>
             </div>
@@ -104,22 +110,42 @@
         <section id="cv" class="cv section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Özgeçmiş</h2>
+                    <h2 class="section-title" data-tr="Özgeçmiş" data-en="Curriculum Vitae">Özgeçmiş</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="cv-content">
+                    <!-- Education Card -->
                     <div class="cv-card">
                         <div class="cv-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div class="cv-details">
-                            <h3>Eğitim &amp; Akademik Kariyer</h3>
+                            <h3 data-tr="Eğitim" data-en="Education">Eğitim</h3>
                             <ul class="timeline">
                                 {% for edu in site.education %}
                                 <li>
                                     <span class="date">{{ edu.year }}</span>
-                                    <h4>{{ edu.degree }}</h4>
-                                    <p>{{ edu.institution }}</p>
+                                    <h4 data-tr="{{ edu.degree }}" data-en="{{ edu.degree_en }}">{{ edu.degree }}</h4>
+                                    <p data-tr="{{ edu.institution }}" data-en="{{ edu.institution_en }}">{{ edu.institution }}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Career Card -->
+                    <div class="cv-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="cv-details">
+                            <h3 data-tr="Kariyer" data-en="Career">Kariyer</h3>
+                            <ul class="timeline">
+                                {% for job in site.career %}
+                                <li>
+                                    <span class="date" {% if job.year_en %}data-tr="{{ job.year }}" data-en="{{ job.year_en }}"{% endif %}>{{ job.year }}</span>
+                                    <h4 data-tr="{{ job.position }}" data-en="{{ job.position_en }}">{{ job.position }}</h4>
+                                    <p data-tr="{{ job.institution }}" data-en="{{ job.institution_en }}">{{ job.institution }}</p>
                                 </li>
                                 {% endfor %}
                             </ul>
@@ -133,7 +159,7 @@
         <section id="yayinlarim" class="publications section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Yayınlarım</h2>
+                    <h2 class="section-title" data-tr="Yayınlarım" data-en="Publications">Yayınlarım</h2>
                     <div class="divider"></div>
                 </div>
                 {% for category in publications.categories %}
@@ -153,71 +179,52 @@
             </div>
         </section>
 
-        <!-- Writings Section -->
-        <section id="yazilarim" class="writings section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Yazılarım</h2>
-                    <div class="divider"></div>
-                </div>
-                <div class="writings-content">
-                    {% for writing in site.writings %}
-                    <div class="writing-promo">
-                        <div class="writing-icon">
-                            <i class="{{ writing.icon }}"></i>
-                        </div>
-                        <h3>{{ writing.name }}</h3>
-                        <p>{{ writing.description }}</p>
-                        <a href="{{ writing.url }}" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-outline mt-auto">
-                            {{ writing.button_text }} <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="iletisim" class="contact section bg-light">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">İletişim</h2>
+                    <h2 class="section-title" data-tr="İletişim" data-en="Contact">İletişim</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="contact-content">
-                    <p style="text-align: center; margin-bottom: 2rem;">
+                    <p style="text-align: center; margin-bottom: 2rem;"
+                       data-tr="Benimle iletişime geçmek için aşağıdaki formu doldurabilir veya <a href='mailto:{{ site.email }}' class='inline-link'>e-posta adresim</a> üzerinden bana ulaşabilirsiniz."
+                       data-en="You can fill out the form below to get in touch or reach me via <a href='mailto:{{ site.email }}' class='inline-link'>my email address</a>.">
                         Benimle iletişime geçmek için aşağıdaki formu doldurabilir veya <a
                             href="mailto:{{ site.email }}" class="inline-link">e-posta adresim</a>
                         üzerinden bana ulaşabilirsiniz.
                     </p>
                     <form action="https://formsubmit.co/{{ site.email }}" method="POST" class="contact-form" id="contactForm">
                         <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
-                        <!-- Honeypot: botlar bu alanı doldurur, insanlar görmez -->
+                        <!-- Honeypot -->
                         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-group">
-                            <label for="name">Adınız Soyadınız</label>
+                            <label for="name" data-tr="Adınız Soyadınız" data-en="Full Name">Adınız Soyadınız</label>
                             <input type="text" id="name" name="name" class="form-control" required
+                                data-tr-placeholder="Adınız Soyadınız" data-en-placeholder="Your full name"
                                 placeholder="Adınız Soyadınız">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-posta Adresiniz</label>
+                            <label for="email" data-tr="E-posta Adresiniz" data-en="Email Address">E-posta Adresiniz</label>
                             <input type="email" id="email" name="email" class="form-control" required
+                                data-tr-placeholder="E-posta adresiniz" data-en-placeholder="Your email address"
                                 placeholder="E-posta adresiniz">
                         </div>
                         <div class="form-group">
-                            <label for="message">Mesajınız</label>
+                            <label for="message" data-tr="Mesajınız" data-en="Your Message">Mesajınız</label>
                             <textarea id="message" name="message" class="form-control" required
+                                data-tr-placeholder="Mesajınızı buraya yazın..." data-en-placeholder="Write your message here..."
                                 placeholder="Mesajınızı buraya yazın..."></textarea>
                         </div>
                         <!-- Matematik CAPTCHA -->
                         <div class="form-group">
-                            <label for="captcha"><i class="fas fa-shield-alt"></i> Güvenlik Sorusu: <strong id="captchaQuestion"></strong></label>
+                            <label for="captcha"><i class="fas fa-shield-alt"></i> <span data-tr="Güvenlik Sorusu:" data-en="Security Question:">Güvenlik Sorusu:</span> <strong id="captchaQuestion"></strong></label>
                             <input type="number" id="captcha" class="form-control" required
+                                data-tr-placeholder="Cevabınızı yazın" data-en-placeholder="Enter your answer"
                                 placeholder="Cevabınızı yazın">
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                            <i class="fas fa-paper-plane"></i> Mesaj Gönder
+                            <i class="fas fa-paper-plane"></i> <span data-tr="Mesaj Gönder" data-en="Send Message">Mesaj Gönder</span>
                         </button>
                     </form>
                 </div>
@@ -229,7 +236,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+                <p><span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</span></p>
             </div>
             <div class="footer-social">
                 {% for link in site.social_links %}

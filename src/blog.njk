@@ -3,7 +3,7 @@ layout: false
 permalink: /blog/
 ---
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +23,17 @@ permalink: /blog/
                     <li><a href="/#home" class="nav-link">Hakkımda</a></li>
                     <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
                     <li><a href="/#yayinlarim" class="nav-link">Yayınlarım</a></li>
-                    <li><a href="/#yazilarim" class="nav-link">Yazılarım</a></li>
                     <li><a href="/blog/" class="nav-link active">Blog</a></li>
                     <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class="header-actions">
+                <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -56,6 +60,28 @@ permalink: /blog/
                             <span class="blog-card-read">Devamını Oku <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
+                    {% endfor %}
+                </div>
+
+                <!-- Yazılarım Section (moved from main page) -->
+                <hr class="section-divider">
+                <div class="section-header" style="margin-top: var(--spacing-lg);">
+                    <h2 class="section-title">Yazılarım</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="writings-content">
+                    {% for writing in site.writings %}
+                    <div class="writing-promo">
+                        <div class="writing-icon">
+                            <i class="{{ writing.icon }}"></i>
+                        </div>
+                        <h3>{{ writing.name }}</h3>
+                        <p>{{ writing.description }}</p>
+                        <a href="{{ writing.url }}" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline mt-auto">
+                            {{ writing.button_text }} <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
