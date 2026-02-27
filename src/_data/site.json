@@ -49,12 +49,61 @@
     },
     {
       "year": "2011 – 2016",
-      "degree": "Lisans, Halkla İlişkiler, Reklamcılık ve Uygulamalı İletişim",
+      "degree": "Halkla İlişkiler",
       "degree_en": "B.A., Public Relations, Advertising, and Applied Communication",
       "institution": "Kadir Has Üniversitesi",
       "institution_en": "Kadir Has University"
     }
   ],
+  "name": "Sadettin Demirel",
+  "greeting_en": "Hello, I am",
+  "bio_summary": "Üsküdar Üniversitesi Gazetecilik Bölümü'nde Dr. Öğr. Üyesi olarak görev yapmaktayım. Yeni medya, veri gazeteciliği, programlamalı sosyal bilimler ve metin madenciliği alanlarında akademik çalışmalar yürütüyorum.",
+  "title_en": "Academician",
+  "about_paragraphs_en": [
+    "Sadettin Demirel completed his undergraduate studies at Kadir Has University, Department of Public Relations and Publicity, in 2016. He received his first master's degree from the New Media Department at Kadir Has University in 2018.",
+    "In 2019, as a Swedish Institute scholar, he completed his second master's in Investigative Journalism at the University of Gothenburg. In 2023, he earned his doctoral degree from Istanbul University's Journalism Ph.D. program with his dissertation titled \"Analyzing the Relationship Between Emotions and User Interactions in Twitter News: A Multi-Method Study.\"",
+    "His academic interests include new media, text mining, computational social sciences, sentiment analysis, social networks, and data journalism.",
+    "Actively engaged in civil society, Demirel is the founder and board member of the Istanbul-based Data Literacy Association (VOYD), established to promote data literacy, support data journalism, and advocate for open data initiatives in Turkey."
+  ],
+  "about_paragraphs": [
+    "Sadettin Demirel, lisans eğitimini Kadir Has Üniversitesi Halkla İlişkiler ve Tanıtım Bölümü'nde, 2016 yılında tamamlamıştır. İlk yüksek lisans derecesini, Kadir Has Üniversitesi Yeni Medya Bölümü'nde 2018 yılında almıştır.",
+    "2019 yılında, İsveç Enstitüsü bursiyeri olarak, Gothenburg Üniversitesi'nde Araştırmacı Gazetecilik alanında ikinci yüksek lisans eğitimini tamamlamıştır. 2023 yılında, İstanbul Üniversitesi Gazetecilik Doktora Ana Bilim Dalı'nda 'Twitter'daki Haberlerde Duygular ve Kullanıcı Etkileşimleri Arasındaki İlişkinin Çözümlenmesi: Çok Yöntemli Bir Çalışma' başlıklı araştırmasıyla doktor unvanı almıştır.",
+    "Yeni medya, metin madenciliği, programlamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
+    "Sivil toplum faaliyetlerine de aktif bir katılım gösteren Demirel, Türkiye'de veri okuryazarlığını teşvik etmek, veri gazeteciliği ve açık veri faaliyetlerini desteklemek amacıyla kurulan İstanbul merkezli Veri Okuryazarlığı Derneği'nin (VOYD) kurucusu ve yönetim kurulu üyesi olarak çalışmalarını sürdürmektedir."
+  ],
+  "writings": [
+    {
+      "name": "Medium",
+      "description": "Veri gazeteciliği ve açık veri üzerine güncel yazılarım ve analizlerim.",
+      "description_en": "My articles and analyses on data journalism and open data.",
+      "url": "https://medium.com/verijurnali",
+      "icon": "fab fa-medium",
+      "button_text": "Veri Jurnali",
+      "button_text_en": "Veri Jurnali"
+    },
+    {
+      "name": "NewsLabTurkey",
+      "description": "NewsLabTurkey platformundaki gazetecilik ve medya üzerine yazılarım.",
+      "description_en": "My articles on journalism and media at the NewsLabTurkey platform.",
+      "url": "https://www.newslabturkey.org/author/sadettindemirel/",
+      "icon": "fas fa-newspaper",
+      "button_text": "Yazılarıma Git",
+      "button_text_en": "Read Articles"
+    },
+    {
+      "name": "VOYD",
+      "description": "Veri Okuryazarlığı Derneği blogundaki değerlendirmelerim ve çalışmalarım.",
+      "description_en": "My evaluations and work on the Data Literacy Association blog.",
+      "url": "https://voyd.org.tr/author/sadettin/",
+      "icon": "fas fa-chart-line",
+      "button_text": "Yazılarıma Git",
+      "button_text_en": "Read Articles"
+    }
+  ],
+  "title": "Akademisyen",
+  "greeting": "Merhaba, ben",
+  "bio_summary_en": "I am an Assistant Professor at the Department of Journalism, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
+  "email": "sadettin.demirel@uskudar.edu.tr",
   "career": [
     {
       "year": "2024 – Devam",
@@ -93,54 +142,5 @@
       "institution": "Açık Veri ve Veri Gazeteciliği Derneği",
       "institution_en": "Open Data and Data Journalism Association"
     }
-  ],
-  "name": "Sadettin Demirel",
-  "bio_summary": "Üsküdar Üniversitesi Gazetecilik Bölümü'nde Dr. Öğr. Üyesi olarak görev yapmaktayım. Yeni medya, veri gazeteciliği, programlamalı sosyal bilimler ve metin madenciliği alanlarında akademik çalışmalar yürütüyorum.",
-  "bio_summary_en": "I am an Assistant Professor at the Department of Journalism, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
-  "about_paragraphs": [
-    "Sadettin Demirel, lisans eğitimini Kadir Has Üniversitesi Halkla İlişkiler ve Tanıtım Bölümü'nde, 2016 yılında tamamlamıştır. İlk yüksek lisans derecesini, Kadir Has Üniversitesi Yeni Medya Bölümü'nde 2018 yılında almıştır.",
-    "2019 yılında, İsveç Enstitüsü bursiyeri olarak, Gothenburg Üniversitesi'nde Araştırmacı Gazetecilik alanında ikinci yüksek lisans eğitimini tamamlamıştır. 2023 yılında, İstanbul Üniversitesi Gazetecilik Doktora Ana Bilim Dalı'nda 'Twitter'daki Haberlerde Duygular ve Kullanıcı Etkileşimleri Arasındaki İlişkinin Çözümlenmesi: Çok Yöntemli Bir Çalışma' başlıklı araştırmasıyla doktor unvanı almıştır.",
-    "Yeni medya, metin madenciliği, programlamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
-    "Sivil toplum faaliyetlerine de aktif bir katılım gösteren Demirel, Türkiye'de veri okuryazarlığını teşvik etmek, veri gazeteciliği ve açık veri faaliyetlerini desteklemek amacıyla kurulan İstanbul merkezli Veri Okuryazarlığı Derneği'nin (VOYD) kurucusu ve yönetim kurulu üyesi olarak çalışmalarını sürdürmektedir."
-  ],
-  "about_paragraphs_en": [
-    "Sadettin Demirel completed his undergraduate studies at Kadir Has University, Department of Public Relations and Publicity, in 2016. He received his first master's degree from the New Media Department at Kadir Has University in 2018.",
-    "In 2019, as a Swedish Institute scholar, he completed his second master's in Investigative Journalism at the University of Gothenburg. In 2023, he earned his doctoral degree from Istanbul University's Journalism Ph.D. program with his dissertation titled \"Analyzing the Relationship Between Emotions and User Interactions in Twitter News: A Multi-Method Study.\"",
-    "His academic interests include new media, text mining, computational social sciences, sentiment analysis, social networks, and data journalism.",
-    "Actively engaged in civil society, Demirel is the founder and board member of the Istanbul-based Data Literacy Association (VOYD), established to promote data literacy, support data journalism, and advocate for open data initiatives in Turkey."
-  ],
-  "writings": [
-    {
-      "name": "Medium",
-      "description": "Veri gazeteciliği ve açık veri üzerine güncel yazılarım ve analizlerim.",
-      "description_en": "My articles and analyses on data journalism and open data.",
-      "url": "https://medium.com/verijurnali",
-      "icon": "fab fa-medium",
-      "button_text": "Veri Jurnali",
-      "button_text_en": "Veri Jurnali"
-    },
-    {
-      "name": "NewsLabTurkey",
-      "description": "NewsLabTurkey platformundaki gazetecilik ve medya üzerine yazılarım.",
-      "description_en": "My articles on journalism and media at the NewsLabTurkey platform.",
-      "url": "https://www.newslabturkey.org/author/sadettindemirel/",
-      "icon": "fas fa-newspaper",
-      "button_text": "Yazılarıma Git",
-      "button_text_en": "Read Articles"
-    },
-    {
-      "name": "VOYD",
-      "description": "Veri Okuryazarlığı Derneği blogundaki değerlendirmelerim ve çalışmalarım.",
-      "description_en": "My evaluations and work on the Data Literacy Association blog.",
-      "url": "https://voyd.org.tr/author/sadettin/",
-      "icon": "fas fa-chart-line",
-      "button_text": "Yazılarıma Git",
-      "button_text_en": "Read Articles"
-    }
-  ],
-  "title": "Akademisyen",
-  "title_en": "Academician",
-  "greeting": "Merhaba, ben",
-  "greeting_en": "Hello, I am",
-  "email": "sadettin.demirel@uskudar.edu.tr"
+  ]
 }
