@@ -20,14 +20,17 @@ permalink: /blog/
             <a href="/" class="logo">SD.</a>
             <nav class="navbar">
                 <ul class="nav-list">
-                    <li><a href="/#home" class="nav-link">Hakkımda</a></li>
-                    <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
-                    <li><a href="/#yayinlarim" class="nav-link">Yayınlarım</a></li>
+                    <li><a href="/#home" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                    <li><a href="/#cv" class="nav-link" data-tr="Özgeçmiş" data-en="CV">Özgeçmiş</a></li>
+                    <li><a href="/publications/" class="nav-link" data-tr="Yayınlarım" data-en="Publications">Yayınlarım</a></li>
                     <li><a href="/blog/" class="nav-link active">Blog</a></li>
-                    <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
+                    <li><a href="/#iletisim" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <button class="toggle-btn" id="langToggle" title="Switch language" aria-label="Switch language">
+                    <span class="lang-label">EN</span>
+                </button>
                 <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -57,7 +60,7 @@ permalink: /blog/
                             <span class="blog-card-date">{{ post.data.date | trDate }}</span>
                             <h3 class="blog-card-title">{{ post.data.title }}</h3>
                             <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
-                            <span class="blog-card-read">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                            <span class="blog-card-read" data-tr="Devamını Oku" data-en="Read More">Devamını Oku <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
                     {% endfor %}
@@ -66,7 +69,7 @@ permalink: /blog/
                 <!-- Yazılarım Section (moved from main page) -->
                 <hr class="section-divider">
                 <div class="section-header" style="margin-top: var(--spacing-lg);">
-                    <h2 class="section-title">Yazılarım</h2>
+                    <h2 class="section-title" data-tr="Yazılarım" data-en="My Writings">Yazılarım</h2>
                     <div class="divider"></div>
                 </div>
                 <div class="writings-content">
@@ -76,10 +79,10 @@ permalink: /blog/
                             <i class="{{ writing.icon }}"></i>
                         </div>
                         <h3>{{ writing.name }}</h3>
-                        <p>{{ writing.description }}</p>
+                        <p data-tr="{{ writing.description }}" data-en="{{ writing.description_en }}">{{ writing.description }}</p>
                         <a href="{{ writing.url }}" target="_blank" rel="noopener noreferrer"
                             class="btn btn-outline mt-auto">
-                            {{ writing.button_text }} <i class="fas fa-arrow-right"></i>
+                            <span data-tr="{{ writing.button_text }}" data-en="{{ writing.button_text_en }}">{{ writing.button_text }}</span> <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     {% endfor %}
@@ -91,7 +94,7 @@ permalink: /blog/
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
             </div>
         </div>
     </footer>

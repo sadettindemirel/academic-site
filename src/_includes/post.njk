@@ -16,14 +16,17 @@
             <a href="/" class="logo">SD.</a>
             <nav class="navbar">
                 <ul class="nav-list">
-                    <li><a href="/#home" class="nav-link">Hakkımda</a></li>
-                    <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
-                    <li><a href="/#yayinlarim" class="nav-link">Yayınlarım</a></li>
+                    <li><a href="/#home" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                    <li><a href="/#cv" class="nav-link" data-tr="Özgeçmiş" data-en="CV">Özgeçmiş</a></li>
+                    <li><a href="/publications/" class="nav-link" data-tr="Yayınlarım" data-en="Publications">Yayınlarım</a></li>
                     <li><a href="/blog/" class="nav-link active">Blog</a></li>
-                    <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
+                    <li><a href="/#iletisim" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
+                <button class="toggle-btn" id="langToggle" title="Switch language" aria-label="Switch language">
+                    <span class="lang-label">EN</span>
+                </button>
                 <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -54,7 +57,7 @@
                     {{ content | safe }}
                 </div>
                 <div class="post-footer">
-                    <a href="/blog/" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Tüm Yazılar</a>
+                    <a href="/blog/" class="btn btn-outline" data-tr="Tüm Yazılar" data-en="All Posts"><i class="fas fa-arrow-left"></i> Tüm Yazılar</a>
                 </div>
             </div>
         </article>
@@ -63,7 +66,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
             </div>
         </div>
     </footer>
