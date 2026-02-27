@@ -23,6 +23,30 @@
       "url": "https://medium.com/verijurnali",
       "icon": "fab fa-medium-m",
       "label": "Medium"
+    },
+    {
+      "platform": "researchgate",
+      "url": "https://www.researchgate.net/profile/Sadettin-Demirel-2",
+      "icon": "fab fa-researchgate",
+      "label": "ResearchGate"
+    },
+    {
+      "platform": "googlescholar",
+      "url": "https://scholar.google.com/citations?hl=tr&user=wQpGDFQAAAAJ&view_op=list_works&sortby=pubdate",
+      "icon": "fas fa-graduation-cap",
+      "label": "Google Scholar"
+    },
+    {
+      "platform": "orcid",
+      "url": "https://orcid.org/0000-0002-3282-1706",
+      "icon": "fab fa-orcid",
+      "label": "ORCID"
+    },
+    {
+      "platform": "webofscience",
+      "url": "https://www.webofscience.com/wos/author/record/IZQ-4684-2023",
+      "icon": "fas fa-flask",
+      "label": "Web of Science"
     }
   ],
   "education": [

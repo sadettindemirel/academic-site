@@ -1,0 +1,88 @@
+---
+layout: false
+permalink: /publications/
+---
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayınlarım — Dr. {{ site.name }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="/" class="logo">SD.</a>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="/#home" class="nav-link">Hakkımda</a></li>
+                    <li><a href="/#cv" class="nav-link">Özgeçmiş</a></li>
+                    <li><a href="/publications/" class="nav-link active">Yayınlarım</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
+                    <li><a href="/#iletisim" class="nav-link">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="publications-page section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Yayınlarım</h2>
+                    <div class="divider"></div>
+                </div>
+                {% for category in publications.categories %}
+                <div class="pub-category">
+                    <h3 class="category-title"><i class="{{ category.icon }}"></i> {{ category.title }}</h3>
+                    <div class="publications-list">
+                        {% for pub in category.items %}
+                        {% if pub.doi %}
+                        <a href="{{ pub.doi }}" target="_blank" rel="noopener noreferrer" class="pub-card pub-card-link">
+                            <div class="pub-card-content">
+                                <h3 class="pub-title">{{ pub.title }}</h3>
+                                <p class="pub-authors">{{ pub.authors }}</p>
+                                <p class="pub-venue">{{ pub.venue }}</p>
+                            </div>
+                            <span class="pub-doi-badge"><i class="fas fa-external-link-alt"></i> DOI</span>
+                        </a>
+                        {% else %}
+                        <div class="pub-card">
+                            <div class="pub-card-content">
+                                <h3 class="pub-title">{{ pub.title }}</h3>
+                                <p class="pub-authors">{{ pub.authors }}</p>
+                                <p class="pub-venue">{{ pub.venue }}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <p>&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
