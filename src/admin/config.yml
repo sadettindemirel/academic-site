@@ -5,8 +5,8 @@ backend:
 
 locale: "tr"
 
-media_folder: "src"
-public_folder: "/"
+media_folder: "src/blog"
+public_folder: "/blog"
 
 collections:
   - name: "blog"
@@ -32,26 +32,45 @@ collections:
         file: "src/_data/site.json"
         fields:
           - { label: "Ad Soyad", name: "name", widget: "string" }
-          - { label: "Unvan", name: "title", widget: "string" }
-          - { label: "Karşılama Metni", name: "greeting", widget: "string", default: "Merhaba, ben" }
+          - { label: "Unvan (TR)", name: "title", widget: "string" }
+          - { label: "Unvan (EN)", name: "title_en", widget: "string" }
+          - { label: "Karşılama Metni (TR)", name: "greeting", widget: "string", default: "Merhaba, ben" }
+          - { label: "Karşılama Metni (EN)", name: "greeting_en", widget: "string", default: "Hello, I am" }
           - { label: "E-posta", name: "email", widget: "string" }
-          - { label: "Kısa Biyografi (Hero)", name: "bio_summary", widget: "text" }
-          - label: "Hakkımda Paragrafları"
+          - { label: "Kısa Biyografi / Hero (TR)", name: "bio_summary", widget: "text" }
+          - { label: "Kısa Biyografi / Hero (EN)", name: "bio_summary_en", widget: "text" }
+          - label: "Hakkımda Paragrafları (TR)"
             name: "about_paragraphs"
             widget: "list"
             field: { label: "Paragraf", name: "paragraph", widget: "text" }
+          - label: "Hakkımda Paragrafları (EN)"
+            name: "about_paragraphs_en"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
           - label: "Eğitim Bilgileri"
             name: "education"
             widget: "list"
             fields:
               - { label: "Yıl", name: "year", widget: "string" }
-              - { label: "Derece", name: "degree", widget: "string" }
-              - { label: "Kurum", name: "institution", widget: "string" }
+              - { label: "Derece (TR)", name: "degree", widget: "string" }
+              - { label: "Derece (EN)", name: "degree_en", widget: "string" }
+              - { label: "Kurum (TR)", name: "institution", widget: "string" }
+              - { label: "Kurum (EN)", name: "institution_en", widget: "string" }
+          - label: "Kariyer"
+            name: "career"
+            widget: "list"
+            fields:
+              - { label: "Yıl (TR)", name: "year", widget: "string" }
+              - { label: "Yıl (EN)", name: "year_en", widget: "string", required: false }
+              - { label: "Pozisyon (TR)", name: "position", widget: "string" }
+              - { label: "Pozisyon (EN)", name: "position_en", widget: "string" }
+              - { label: "Kurum (TR)", name: "institution", widget: "string" }
+              - { label: "Kurum (EN)", name: "institution_en", widget: "string" }
           - label: "Sosyal Medya Linkleri"
             name: "social_links"
             widget: "list"
             fields:
-              - { label: "Platform", name: "platform", widget: "select", options: ["email", "twitter", "linkedin", "medium", "github", "youtube"] }
+              - { label: "Platform", name: "platform", widget: "select", options: ["email", "twitter", "linkedin", "medium", "researchgate", "googlescholar", "orcid", "webofscience", "github", "youtube"] }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-linkedin-in" }
               - { label: "Etiket", name: "label", widget: "string" }
@@ -60,10 +79,12 @@ collections:
             widget: "list"
             fields:
               - { label: "Platform Adı", name: "name", widget: "string" }
-              - { label: "Açıklama", name: "description", widget: "text" }
+              - { label: "Açıklama (TR)", name: "description", widget: "text" }
+              - { label: "Açıklama (EN)", name: "description_en", widget: "text" }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-medium" }
-              - { label: "Buton Metni", name: "button_text", widget: "string" }
+              - { label: "Buton Metni (TR)", name: "button_text", widget: "string" }
+              - { label: "Buton Metni (EN)", name: "button_text_en", widget: "string" }
 
   - name: "publications"
     label: "Yayınlar"
@@ -76,7 +97,8 @@ collections:
             name: "categories"
             widget: "list"
             fields:
-              - { label: "Kategori Başlığı", name: "title", widget: "string" }
+              - { label: "Kategori Başlığı (TR)", name: "title", widget: "string" }
+              - { label: "Kategori Başlığı (EN)", name: "title_en", widget: "string" }
               - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fas fa-globe" }
               - label: "Yayınlar"
                 name: "items"
@@ -85,3 +107,4 @@ collections:
                   - { label: "Başlık", name: "title", widget: "string" }
                   - { label: "Yazarlar", name: "authors", widget: "string" }
                   - { label: "Yayın Yeri / Dergi", name: "venue", widget: "string" }
+                  - { label: "DOI Linki", name: "doi", widget: "string", required: false }
