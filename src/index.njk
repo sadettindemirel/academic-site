@@ -171,7 +171,7 @@
                             href="mailto:{{ site.email }}" class="inline-link">e-posta adresim</a>
                         üzerinden bana ulaşabilirsiniz.
                     </p>
-                    <form action="https://formsubmit.co/{{ site.email }}" method="POST" class="contact-form" id="contactForm">
+                    <form action="https://formsubmit.co/{{ site.formsubmit_token }}" method="POST" class="contact-form" id="contactForm">
                         <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
                         <!-- Honeypot -->
                         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">

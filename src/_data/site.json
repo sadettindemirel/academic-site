@@ -82,7 +82,7 @@
   "name": "Sadettin Demirel",
   "greeting_en": "Hello, I am",
   "bio_summary": "Üsküdar Üniversitesi Gazetecilik Bölümü'nde Dr. Öğr. Üyesi olarak görev yapmaktayım. Yeni medya, veri gazeteciliği, programlamalı sosyal bilimler ve metin madenciliği alanlarında akademik çalışmalar yürütüyorum.",
-  "title_en": "Academician",
+  "title_en": "Scholar",
   "about_paragraphs_en": [
     "Sadettin Demirel completed his undergraduate studies at Kadir Has University, Department of Public Relations and Publicity, in 2016. He received his first master's degree from the New Media Department at Kadir Has University in 2018.",
     "In 2019, as a Swedish Institute scholar, he completed his second master's in Investigative Journalism at the University of Gothenburg. In 2023, he earned his doctoral degree from Istanbul University's Journalism Ph.D. program with his dissertation titled \"Analyzing the Relationship Between Emotions and User Interactions in Twitter News: A Multi-Method Study.\"",
@@ -128,6 +128,7 @@
   "greeting": "Merhaba, ben",
   "bio_summary_en": "I am an Assistant Professor at the Department of Journalism, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
   "email": "sadettin.demirel@uskudar.edu.tr",
+  "formsubmit_token": "25476d1c7f7d1ed9f813acb4c4c9041f",
   "career": [
     {
       "year": "2024 – Devam",
