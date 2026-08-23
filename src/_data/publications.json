@@ -61,6 +61,18 @@
             "icon": "fas fa-file-alt",
             "items": [
                 {
+                    "title": "Türkiye’de Alevilerin Medyada Temsili: Haber Tweetleri Üzerine Hesaplamalı Bir Analiz",
+                    "authors": "Demirel, S.",
+                    "venue": "Yeni Medya Dergisi, (20), 417–442, 2026",
+                    "doi": "https://doi.org/10.55609/yenimedya.1865257"
+                },
+                {
+                    "title": "Sentiment Analysis in Communication Studies: A Bibliometric Study on Web of Science Indexed Articles",
+                    "authors": "Demirel, S.",
+                    "venue": "İletişim Kuram ve Araştırma Dergisi, 73, 302-330, 2026",
+                    "doi": "https://doi.org/10.47998/ikad.1835598"
+                },
+                {
                     "title": "Media Representations of Climate Change in Türkiye: A Multi-Method Study",
                     "authors": "Bulur, N., Demirel, S., & Çakıcı, Z.",
                     "venue": "Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 13(1), 327-357, 2025",
@@ -85,6 +97,12 @@
             "title_en": "Books & Book Chapters",
             "icon": "fas fa-book",
             "items": [
+                {
+                    "title": "Simulating the Frontline in the Post-Truth Age: Sound, Spectacle, and the Satire of the Journalistic Hero in Special Correspondents",
+                    "authors": "Demirel, S.",
+                    "venue": "In E. E. Ercan (Ed.), Representations of Journalism in Movie Culture (pp. 59–84). IGI Global Scientific Publishing, 2026",
+                    "doi": "https://doi.org/10.4018/979-8-3373-9008-6.ch003"
+                },
                 {
                     "title": "Mapping the Fight Against Information Disorders in Turkey: A Computational Analysis of Fact-Checkers' Tweets",
                     "authors": "Demirel, S.",
