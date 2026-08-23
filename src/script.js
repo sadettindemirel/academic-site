@@ -6,16 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
-    // Dark Mode Toggle
+    // Dark Mode Toggle (Warm Editorial Theme)
     // =========================================================================
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
 
-    // Load saved theme
+    // Load saved theme (supports legacy values gracefully)
     const savedTheme = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', savedTheme);
+    const isDark = savedTheme.includes('dark');
+    const currentTheme = isDark ? 'dark' : 'light';
+    html.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
     if (themeToggle) {
-        updateThemeIcon(savedTheme);
+        updateThemeIcon(currentTheme);
     }
 
     if (themeToggle) {
@@ -31,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateThemeIcon(theme) {
         if (!themeToggle) return;
         const icon = themeToggle.querySelector('i');
+        if (!icon) return;
         if (theme === 'dark') {
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');

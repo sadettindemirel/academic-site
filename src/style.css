@@ -1,17 +1,17 @@
 /* ==========================================================================
-   CSS Variables & Reset
+   CSS Variables & Reset — Warm Editorial Theme
    ========================================================================== */
-:root {
-    /* Colors */
-    --color-bg: #f8fafc;
-    --color-surface: #ffffff;
-    --color-text: #1e293b;
-    --color-text-light: #64748b;
-    --color-primary: #0f172a;
-    --color-secondary: #334155;
-    --color-accent: #3b82f6;
-    /* Subtle blue for links/accents */
-    --color-border: #e2e8f0;
+:root,
+[data-theme="light"] {
+    /* Colors — Warm Editorial (Light) */
+    --color-bg: #f7f4ed;            /* Warm paper / cream background */
+    --color-surface: #ffffff;       /* Pure white card surface */
+    --color-text: #292524;          /* Deep warm charcoal ink */
+    --color-text-light: #78716c;    /* Warm stone gray */
+    --color-primary: #1c1917;       /* Deep warm black / headline */
+    --color-secondary: #44403c;     /* Dark warm stone */
+    --color-accent: #c2410c;        /* Warm terracotta / burnt orange */
+    --color-border: #e7e5e4;        /* Soft stone border */
 
     /* Typography */
     --font-heading: 'Playfair Display', serif;
@@ -25,41 +25,57 @@
     --spacing-xl: 6rem;
 
     /* Effects */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-sm: 0 1px 2px 0 rgb(41 37 36 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(41 37 36 / 0.08), 0 2px 4px -2px rgb(41 37 36 / 0.04);
+    --shadow-lg: 0 10px 15px -3px rgb(41 37 36 / 0.1), 0 4px 6px -4px rgb(41 37 36 / 0.05);
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
     --transition: all 0.3s ease;
 }
 
-/* Dark Theme */
+/* Dark Theme — Warm Editorial Dark (Espresso & Amber Terracotta) */
 [data-theme="dark"] {
-    --color-bg: #0f172a;
-    --color-surface: #1e293b;
-    --color-text: #e2e8f0;
-    --color-text-light: #94a3b8;
-    --color-primary: #e2e8f0;
-    --color-secondary: #cbd5e1;
-    --color-accent: #60a5fa;
-    --color-border: #334155;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+    --color-bg: #1c1917;            /* Deep warm espresso */
+    --color-surface: #292524;       /* Dark warm stone surface */
+    --color-text: #f5f5f4;          /* Off-white warm text */
+    --color-text-light: #a8a29e;    /* Muted warm stone */
+    --color-primary: #f5f5f4;       /* Warm light headline */
+    --color-secondary: #d6d3d1;     /* Soft warm stone */
+    --color-accent: #fb923c;        /* Luminous terracotta amber */
+    --color-border: #44403c;        /* Dark warm stone border */
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.3);
 }
 
 [data-theme="dark"] .header {
-    background-color: rgba(15, 23, 42, 0.9);
+    background-color: rgba(28, 25, 23, 0.92);
     border-bottom-color: var(--color-border);
 }
 
 [data-theme="dark"] .writing-promo {
-    background: linear-gradient(135deg, #1e3a5f 0%, #0f2847 100%);
+    background: linear-gradient(135deg, #292524 0%, #1c1917 100%);
+    border: 1px solid var(--color-border);
 }
 
 [data-theme="dark"] .footer {
-    background-color: #020617;
+    background-color: #141211;
+    border-top: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .btn-primary {
+    color: #1c1917;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .toggle-btn:hover {
+    color: #1c1917;
+}
+
+[data-theme="dark"] .image-wrapper {
+    border-color: var(--color-surface);
 }
 
 /* Header Actions (toggles + mobile menu) */
@@ -667,7 +683,7 @@ a.pub-card-link {
 
 .pub-card:hover {
     box-shadow: var(--shadow-md);
-    border-color: #cbd5e1;
+    border-color: var(--color-accent);
     transform: translateY(-2px);
 }
 
@@ -768,7 +784,7 @@ a.pub-card-link:hover {
 }
 
 .writing-promo p {
-    color: #e2e8f0;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-md);
     font-size: 1.05rem;
     flex-grow: 1;
@@ -821,6 +837,8 @@ a.pub-card-link:hover {
 
 .form-control {
     padding: 12px 15px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     font-family: var(--font-body);
@@ -831,7 +849,7 @@ a.pub-card-link:hover {
 .form-control:focus {
     outline: none;
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.2);
 }
 
 textarea.form-control {
@@ -857,7 +875,8 @@ textarea.form-control {
 }
 
 .footer-info p {
-    color: #94a3b8;
+    color: var(--color-text-light);
+    opacity: 0.85;
     margin-bottom: 0;
     font-size: 0.95rem;
 }
@@ -868,12 +887,14 @@ textarea.form-control {
 }
 
 .footer-social a {
-    color: #94a3b8;
+    color: var(--color-text-light);
+    opacity: 0.85;
     font-size: 1.2rem;
 }
 
 .footer-social a:hover {
-    color: var(--color-surface);
+    color: var(--color-accent);
+    opacity: 1;
 }
 
 /* ==========================================================================
@@ -989,7 +1010,7 @@ textarea.form-control {
 .blog-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: #cbd5e1;
+    border-color: var(--color-accent);
 }
 
 .blog-card-image {

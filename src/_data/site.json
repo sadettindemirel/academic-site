@@ -127,7 +127,7 @@
   ],
   "title": "Akademisyen",
   "greeting": "Merhaba, ben",
-  "bio_summary_en": "I am an Assistant Professor at the Department of Journalism, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
+  "bio_summary_en": "I am an Assistant Professor at the Department of New Media and Communication, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
   "email": "sadettin.demirel@uskudar.edu.tr",
   "career": [
     {
@@ -135,8 +135,8 @@
       "year_en": "2024 – Present",
       "position": "Dr. Öğr. Üyesi",
       "position_en": "Assistant Professor",
-      "institution": "Üsküdar Üniversitesi, Gazetecilik Bölümü",
-      "institution_en": "Üsküdar University, Department of Journalism"
+      "institution": "Üsküdar Üniversitesi, Yeni Medya ve İletişim Bölümü",
+      "institution_en": "Üsküdar University, Department of New Media and Communication"
     },
     {
       "year": "2023 – 2024",
