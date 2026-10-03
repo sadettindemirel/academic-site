@@ -3,5 +3,6 @@
     "permalink": "/blog/{{ page.fileSlug }}/",
     "tags": "blog",
     "nav": "blog",
-    "ogType": "article"
+    "ogType": "article",
+    "templateEngineOverride": "md"
 }

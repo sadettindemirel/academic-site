@@ -7,7 +7,11 @@
     "dev": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "fast-xml-parser": "^5.11.2",
+    "prismjs": "^1.30.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
   },
   "dependencies": {
     "markdown-it": "^14.1.1"

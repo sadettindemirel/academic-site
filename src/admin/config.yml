@@ -22,6 +22,8 @@ collections:
       - { label: "Özet", name: "excerpt", widget: "text" }
       - { label: "Kapak Görseli", name: "thumbnail", widget: "image", required: false }
       - { label: "Etiketler", name: "tags_display", widget: "string", required: false }
+      - { label: "Orijinal Yayın Linki", name: "original_url", widget: "string", required: false, hint: "Yazı başka bir platformdan aktarıldıysa (Medium, NewsLabTurkey) yazının sonunda kaynak olarak gösterilir" }
+      - { label: "Orijinal Yayın Yeri", name: "original_source", widget: "string", required: false }
       - { label: "İçerik", name: "body", widget: "markdown" }
 
   - name: "site"

@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Blog code snippets: language label + copy button
+    document.querySelectorAll('.post-content pre.code-block').forEach(pre => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-snippet';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        const bar = document.createElement('div');
+        bar.className = 'code-snippet-bar';
+        const label = document.createElement('span');
+        label.textContent = pre.dataset.lang || '';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'code-copy';
+        button.textContent = 'Kopyala';
+        button.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(pre.innerText);
+                button.textContent = 'Kopyalandı ✓';
+            } catch (e) {
+                button.textContent = 'Kopyalanamadı';
+            }
+            setTimeout(() => { button.textContent = 'Kopyala'; }, 2000);
+        });
+        bar.append(label, button);
+        wrapper.appendChild(bar);
+    });
+
     // Set Current Year in Footer
     const yearSpan = document.getElementById('currentYear');
     if (yearSpan) {

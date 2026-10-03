@@ -1,0 +1,36 @@
+name: Medium ve NewsLabTurkey yazılarını aktar
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Her pazartesi 06:00 UTC (09:00 TR)
+  workflow_dispatch: # Actions sekmesinden elle çalıştırma
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install --no-audit --no-fund
+
+      - name: Yeni yazıları çek
+        run: node scripts/import-blog.mjs
+
+      - name: Yeni yazı varsa commit et (Netlify otomatik yayınlar)
+        run: |
+          git add src/blog
+          if git diff --cached --quiet; then
+            echo "Yeni yazı yok."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content: Medium/NewsLabTurkey'den yeni blog yazıları"
+          git push

@@ -1,8 +1,17 @@
 const markdownIt = require("markdown-it");
+const Prism = require("prismjs");
+require("prismjs/components/")(["r", "python", "sql", "bash", "json"]);
+
+// Syntax highlighting for fenced code blocks at build time (no client-side JS needed)
+function highlight(code, lang) {
+    const grammar = Prism.languages[lang];
+    const body = grammar ? Prism.highlight(code, grammar, lang) : markdownIt().utils.escapeHtml(code);
+    return `<pre class="code-block" data-lang="${lang || ""}"><code class="language-${lang || "text"}">${body}</code></pre>`;
+}
 
 module.exports = function (eleventyConfig) {
     // Enable HTML inside Markdown (for embeds, iframes, scripts)
-    const md = markdownIt({ html: true, breaks: true, linkify: true });
+    const md = markdownIt({ html: true, breaks: true, linkify: true, highlight });
     eleventyConfig.setLibrary("md", md);
 
     // Copy static assets to output
