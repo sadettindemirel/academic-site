@@ -8,9 +8,6 @@ tags_display: "Veri Gazeteciliği, Data Journalism, Data Scraping, R Programming
 original_url: https://medium.com/verijurnali/r-ile-twitter-verisi-nasil-cekilir-analiz-edilir-9a14e3f602f9
 original_source: Medium
 ---
-![by edar on pixabay](https://cdn-images-1.medium.com/max/1024/1*hVyyXKWHskqeVxOXrMckLg.jpeg)
-*by edar on pixabay*
-
 Twitter birçoğumuzun günlük sosyalleşme, eğlence, dünyadan haberdar olma gibi ihtiyaçlarını karşıladığı sosyal ağlardan birisi. Aynı zamanda, markaların, kamu kuruluşlarının kullanıcısı olduğu dev bir bilgi üretim, dağıtım ve tüketim merkezi. Bu yapısı itibariyle gazeteciler için önemli bir haber kaynağı ve dağıtım kanalı. Fakat bunun da ötesinde Twitter, işlemeyi bilen için zengin bir veri madeni. Ve bu veri madenini kullanarak bir siyasetçinin Twitter’da sadece ne paylaştığını değil, son 6 ayda en çok hangi kelimeleri kullandığına, ne kadar etkileşim aldığına, günün hangi saati tweet attığına, diğer politikacılara oranla aldığı etkileşim oranına, tweetlerinin duygusal analizine ulaşabilirsiniz. Peki bu veri madenini işlemeye nasıl ve nereden başlamalı?
 
 Tweet verisinin kazınması için birçok yol mevcut. Bunu [bir eklenti yardımıyla](https://chrome.google.com/webstore/detail/twitter-archiver/pkanpfekacaojdncfgbjadedbggbbphi) da yapabilirsiniz, R programlama dilini ve [R paketlerini](https://rtweet.info/index.html) kullanarak da. R programlama dilinin avantajı [daha önceki yazımda da belirttiğim gibi](/blog/r-nedir-veri-gazeteciligi-icin-nasil-kullanilir/) veri kazımadan temizlemeye, veri analizinden görselleştirmeye tüm çalışma akışında etkili bir şekilde kullanılabilmesi.

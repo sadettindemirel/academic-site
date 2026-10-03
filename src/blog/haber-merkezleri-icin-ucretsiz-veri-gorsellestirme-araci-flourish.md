@@ -8,9 +8,6 @@ tags_display: "Data Visualization, Data Journalism, Veri Gazeteciliği, Veri Gö
 original_url: https://medium.com/verijurnali/haber-merkezleri-i%CC%87%C3%A7in-%C3%BCcretsiz-veri-g%C3%B6rselle%C5%9Ftirme-arac%C4%B1-flourish-2b8d8b70eddd
 original_source: Medium
 ---
-![görsel: flourish.studio](https://cdn-images-1.medium.com/max/1024/1*KXBDR2T6J6qIhFemg2twmg.jpeg)
-*görsel: flourish.studio*
-
 ## *Güçlü, Güzel ve Kolay Veri Görselleştirme*
 
 Artık haber merkezlerine özel ücretsiz premium bir veri görselleştirme aracı var. Yakın zamanda beta sürümüyle erişime açılan [*Flourish, Google News Lab işbirliğiyle haber merkezlerine ücretsiz veri görselleştirme hizmeti sunuyor.*](https://flourish.studio/newsrooms/) Diğer ücretsiz araçlarla kıyaslandığında Flourish haber merkezlerinin kendi ihtiyacına göre kod ve tasarım özelleştirmeleri yapabileceği bir araç.

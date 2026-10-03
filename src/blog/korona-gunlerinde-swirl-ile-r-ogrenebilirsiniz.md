@@ -8,9 +8,6 @@ tags_display: "Veri Gazeteciliği, Rstats, R Programming, Swirl"
 original_url: https://medium.com/verijurnali/swirl-ile-r-%C3%B6%C4%9Frenmek-%C3%A7ok-kolay-225de1b1e5a1
 original_source: Medium
 ---
-![image by rawpixel](https://cdn-images-1.medium.com/max/1024/1*qTb-ywq2xKpoRXrzp3LZLw.jpeg)
-*image by rawpixel*
-
 SwiRl R programlama dili için geliştirilmiş bir yazılım paketi, ggplot2 (veri görselleştirme), dplyr (veri manipülasyonu)gibi R paketlerinden farklı olarak R ve R studio gibi uygulamaları interaktif bir öğrenim platformu haline getiriyor.
 
 John Hopkins Üniversitesi veri bilimcileri tarafından geliştirilen yazılım, “yaparak öğrenmek” prensibi üzerine kurulu. Açık kaynak kodlu yazılım, hali hazırda belirli R modülleriyle başlangıç seviyesindeki kullanıcılara R öğrenme ve [Github](https://github.com/swirldev/swirl) üzerinden yüklenecek yeni modüllerle R yeteneklerini geliştirme imkanı tanıyor.

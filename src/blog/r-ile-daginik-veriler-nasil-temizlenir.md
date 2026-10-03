@@ -8,9 +8,6 @@ tags_display: "Data Manipulation, Veri Temizleme, Rstats, Data Cleaning, R Progr
 original_url: https://medium.com/verijurnali/r-ekosisteminde-veri-temizleme-nasil-yapilir-f1d8e1575fba
 original_source: Medium
 ---
-![Photo by Mitchell Luo on Unsplash](https://cdn-images-1.medium.com/max/1024/0*vV9TkFo9yQz5-WpF)
-*Photo by Mitchell Luo on Unsplash*
-
 *Veri temizleme, veri haberciliği süreçlerinde gazetecilerin en çok mesai harcadıkları, zahmetli adımlardan bir tanesi. Günümüzde yapılandırılmış veri kaynakları giderek artıyor olsa da analize başlamadan önce veriyi yayınlandığı formattan (bkz: TÜİK) kurtarmak ve derli hâle getirmek gerekiyor. Özellikle 7/24 haber akışı ve gazetecinin üzerindeki zaman baskısı düşünüldüğünde zaten zahmetli olan bu süreç daha da önemli oluyor. Bu noktada yapılan akademik araştırmalar da gazetecilerin veri haberciliği süreçlerinde en çok zaman yetmezliğinden şikâyet ettiklerini doğruluyor. Fakat bu zahmetli süreci birkaç satır R koduyla kolaylaştırarak zamandan tasarruf etmek mümkün. Peki nasıl? Bu yazıda R yazılımı ile dağınık verileri temizleme yollarını uygulamalı olarak anlatacağım.*
 
 Öncelikle dağınık verilerin üstesinden gelmek için R yazılımına alternatif diller (python) ve yazılımlar (Open Refine) kullanılabilir. Özellikle dplyr, tidyr ve stringr gibi paketlerin varlığı, yazılım kısmında daha kararlı bir ekosisteme (Rstudio) sahip olması bence R’ı bu süreçte daha cazip kılıyor.

@@ -8,9 +8,6 @@ tags_display: "Tableau, Data Visualization, Veri Gazeteciliği, Veri Görselleş
 original_url: https://medium.com/verijurnali/tableau-public-ile-deprem-verilerini-g%C3%B6rselle%C5%9Ftirmek-6b621dbf3b25
 original_source: Medium
 ---
-![Görseldeki çalışma için tıklayınız](https://cdn-images-1.medium.com/max/1024/1*2k9nqQMdYbasOGKLwiWWFw.png)
-*Görseldeki çalışma için tıklayınız*
-
 ## Tableau ile deprem verilerini görselleştirmek — (İnceleme)
 
 *Bu yazı* [*tableau public*](https://public.tableau.com/en-us/s/) *aracı ile deprem verilerinin nasıl görselleştirilebileceğine dair bir inceleme yazısıdır. Bahsi geçen veriler AFAD verileridir.* [*Şu adresten*](http://www.deprem.gov.tr/) *indirilebilir. Bu inceleme için kullandığım veri setine ise* [*şuradan*](https://drive.google.com/open?id=0B4zBqf-mJbr1LXhCRFpRdnhPLXM) *ulaşılabilir.*

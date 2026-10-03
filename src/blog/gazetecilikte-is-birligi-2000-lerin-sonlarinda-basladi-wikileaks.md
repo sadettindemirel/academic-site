@@ -8,9 +8,6 @@ tags_display: "Journalism, Collaboration, Veri Gazeteciliği, Gazetecilik, Data 
 original_url: https://medium.com/verijurnali/%C3%A7eviri-gazetecilikte-i%C5%9F-birli%C4%9Fi-2000lerin-sonlar%C4%B1nda-ba%C5%9Flad%C4%B1-wikileaks-bu-y%C3%B6ntemin-%C3%B6nc%C3%BCs%C3%BC-oldu-a7caf53904b
 original_source: Medium
 ---
-![Photo by Marvin Meyer on Unsplash](https://cdn-images-1.medium.com/max/1024/0*ZKV44tQPCOoSADAk)
-*Photo by Marvin Meyer on Unsplash*
-
 ## Gazetecilikte iş birliği 2000’lerin sonlarında başladı. Wikileaks bu yöntemin öncüsü oldu — Çeviri
 
 > Bu kısa makale,veriye dayalı gazetecilik yapan Journalism++’ın kurucusu Nicolas Kayser-Bril’in yazdığı [“Collaboration In Journalism”](http://blog.nkb.fr/collaboration) adlı yazının çevirisidir. Reuters Gazetecilik Araştırmaları Enstitüsü tarafından Aralık 2016’da düzenlenen yuvarlak masa toplantısı için yazılmıştır. Çeviri: Sadettin Demirel

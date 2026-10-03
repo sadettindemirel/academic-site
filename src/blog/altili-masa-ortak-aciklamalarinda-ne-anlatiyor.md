@@ -8,8 +8,6 @@ tags_display: "Text Analysis, Millet İ̇ttifakı, Altılı Masa, Politika, Seç
 original_url: https://medium.com/verijurnali/alt%C4%B1l%C4%B1-masa-ortak-a%C3%A7%C4%B1klamalar%C4%B1nda-ne-anlat%C4%B1yor-152675f4a308
 original_source: Medium
 ---
-![](https://cdn-images-1.medium.com/max/1024/1*FAs7C9Ca49lO7eOGbmRdxw.png)
-
 *Cumhuriyet Halk Partisi, Demokrat Parti, Deva Partisi, Gelecek Partisi, İyi Parti ve Saadet Partisi’nden oluşan altılı masa ittifakı (Millet İttifakı) 12 Şubat 2022 tarihinden beri belirli aralıklarla bir araya gelerek kamuoyuna ortak açıklamalarda bulunuyor. Altılı masa, 2023 genel seçimlerinde iktidar olmayı ve cumhurbaşkanlığı seçimlerini de belirleyeceği ortak aday ile kazanmayı hedefliyor. Peki bugüne kadar 10 toplantı gerçekleştiren bu masa ortak açıklamalarında kamuoyuna ne söylüyor? Altılı masa bize ne anlatıyor? Bu yazıda bu sorulara altılı masanın ortak açıklamalarını niceliksel metin analizi teknikleriyle inceleyerek cevaplamaya çalışacağım.*
 
 Bir feragatname ile başlayalım. Bu yazı altılı masanın (29 Ocak’ta yapılan son toplantı sonrası kullanılan isimle “Millet İttifakı”) ortak açıklamalarını niteliksel bir şekilde derinlemesine kelimesi kelimesine incelemiyor. Metne dair söylem analizinde bulunmuyor. Bu yazıda metine bir veri olarak (text as data) yaklaşılarak metinde sıklıkla kullanılan kelimeler, kelime öbekleri, kelimeleri kapsayan tema veya kategoriler ortaya konuluyor. Elde edilen çıktılar tamamen otomasyonel (automated) değil, bazı durumlarda sıklıkla kullanılan kelimelerin rafine edilmesinde, metin içinde araştırılacak kategorilerin ve bu kategorilerin kapsadığı anahtar kelimelerin seçilmesinde insan etkisi bulunuyor. Ek olarak bu analiz en son açıklanan mutabakat metnini içermiyor.

@@ -8,9 +8,6 @@ tags_display: "Açık Veri, Açık Devlet, Çeviri, Open Data"
 original_url: https://medium.com/verijurnali/%C3%A7eviri-a%C3%A7%C4%B1k-verinin-ekonomik-etkisi-hakk%C4%B1nda-ne-biliyoruz-f75d681a7487
 original_source: Medium
 ---
-![görsel: descrier.co.uk](https://cdn-images-1.medium.com/max/1024/1*D-sHyt1DsCQQOw4viGFaJQ.jpeg)
-*görsel: descrier.co.uk*
-
 ## Açık Verinin Ekonomik Etkisi Hakkında Ne Biliyoruz? — (Çeviri)
 
 > “Açık veri, ekonomik büyümeye katkı sağlar”

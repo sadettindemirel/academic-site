@@ -8,9 +8,6 @@ tags_display: "Data Journalism, Journalism, Gazetecilik, Veri Gazeteciliği, Hab
 original_url: https://medium.com/verijurnali/haber-sitelerinin-de%C4%9Fi%C5%9Fmesi-gereken-temel-bir-yol-%C3%A7eviri-62518009964f
 original_source: Medium
 ---
-![markusspiske / pixabay](https://cdn-images-1.medium.com/max/1024/1*DrgOrdwufc-yaOz7ButS1A.jpeg)
-*markusspiske / pixabay*
-
 ***Çevirmenin notu:****Bu yazı veri gazetecisi ve geliştirici Adrian Holovaty tarafından 2006 yılında kendi blogunda yayınlanmıştır. Özellikle veri gazeteciliği akademik literatüründe habercilikte yapılandırılmış veri kullanımını ilk defa dile getiren ve veri gazeteciliği yaklaşımını öne süren ilk yazılardandır. Bu alanda çalışmalar yapan bir çok akademisyen tarafından referans verilmiştir (Bounegru, 2012; Howard, 2014; Cairo 2017).*
 
 Son zamanlarda “Gazetelerin Web Sitelerini Geliştirmek İçin 9 Yol” başlıklı bir blog yazısı dolaşıma girdi. Bu sitede çevrimiçi haber endüstrisi hakkında eskisi kadar yazmıyorum, ancak bu makale beni gazete sitelerinin yapması gerekenler konusundaki güncel düşüncelerimi bir araya getirmeye teşvik etti. Burada, gerçekleşmesi gereken temel bir değişiklik hakkındaki görüşümü sunuyorum.

@@ -8,8 +8,6 @@ tags_display: "Dplyr, Data Manipulation, Tableau, Veri Gazeteciliği"
 original_url: https://medium.com/verijurnali/veri-setlerini-birle%C5%9Ftirmek-i%CC%87%C3%A7in-en-pratik-3-yol-ee86db3c02c3
 original_source: Medium
 ---
-![](https://cdn-images-1.medium.com/max/1024/1*mu935PCFBOFIcjOfil0pSQ.jpeg)
-
 Verinin yapısı ve içeriği yapılan veri analizlerini ve görselleştirmeleri doğrudan etkiler. Çünkü yapılacak analizden veya görsel çalışmadan çıkan sonuç aslında eldeki ham verinin özelliklerine bağlıdır. Bu gibi analizlerde farklı değişkenler eklenerek bu ilişkilerden çıktılar elde edilir. Bu ister sıralama, oranlama veya karşılaştırma olsun bazen değişkenler araştırmada veya veri toplamada dahil edilirken diğer durumlarda bu değişkenler denkleme analizi yapan tarafından eklenir. Bu işlem genel olarak veri manipülasyonu (data manipulation) olarak bilinse de veri birleştirmeyi kullanmak, basitleştirmek daha uygun geldi.
 
 Veri setlerini birleştirmeye örnek olarak TÜİK, her yıl illere göre trafik kazası istatistiklerini yayınlıyor ama bu istatistiklerde toplam araç ve toplam sürücü sayısı eklenmeyebiliyor. Bahsedilen değişkenler eklenerek farklı analizler yapılabilir. Veya birbirinde iki farklı araştırmayı (Freedom House’ın Basın Özgürlüğü ve İnternet Özgürlüğü Raporlarını) birbirine ekleyerek ilgili hükümetlerin basın ve internet özgürlüğü skorları karşılaştırılabilir. Tabi bu işlemleri yapmak için belirli yöntemler var.

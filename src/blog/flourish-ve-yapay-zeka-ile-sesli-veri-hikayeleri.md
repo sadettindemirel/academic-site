@@ -8,9 +8,6 @@ tags_display: "Flourish, Data Storytelling, Data Visualization, Artificial İnte
 original_url: https://medium.com/verijurnali/flourish-ve-yapay-zeka-ile-sesli-veri-hikayeleri-nas%C4%B1l-haz%C4%B1rlan%C4%B1r-e5ec839a6108
 original_source: Medium
 ---
-![Photo by Nick Brunner on Unsplash](https://cdn-images-1.medium.com/max/1024/0*jaPgU6vGyuzi-ew2)
-*Photo by Nick Brunner on Unsplash*
-
 Metin, ses, görsel ve video üretebilen büyük dil modelleri (large language models), üretken yapay zekâ teknolojileri olarak hem iş hem de gündelik hayatımıza hızla nüfuz ediyor. Büyük ve karmaşık verilerden anlamlı bulgular elde etmek için verilerin analizi ve görselleştirilmesinde de kullanımına şahit oluyoruz. Son tahlilde amaç tüm bu süreci otomasyonel hale getirerek yapay zeka modellerine devretmek. Ancak, bu yazı yapay zeka ile verilerden anlam çıkarma işini otomatik hale getirmek üzerine değil, hikayeleştirme işinde büyük dil modellerini nasıl entegre edebileceğimize odaklanıyor.
 
 Hikaye yazmak, anlatmak, dinlemek insanın en has özelliklerinden birisi. Yüzyıllar boyu hiyeroglif fıkralarla, söylencelerle, destanlarla, türkülerle hikaye anlatıp duruyoruz. Şimdilerde bunu tweet zincirleriyle, TikTok videolarıyla yapıyoruz. Aynı şekilde veri görselleştirmeyle de bilgiyi, bulguyu hikayeleştirerek anlatmak mümkün. Bu yazı, üretken yapay zekâ öncesinde de var olan bazı teknolojilerin (TTS), büyük dil modelleriyle nasıl daha etkili veri hikayeleri oluşturabileceğini ele alıyor.

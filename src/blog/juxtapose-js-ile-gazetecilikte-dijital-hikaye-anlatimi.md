@@ -7,8 +7,6 @@ thumbnail: https://cdn-images-1.medium.com/max/640/1*jA_C6sBZxS51oYifpJZRCw.gif
 original_url: https://medium.com/verijurnali/juxtapose-ile-gazetecilikte-dijital-hikaye-anlat%C4%B1m%C4%B1-ee2920b68a00
 original_source: Medium
 ---
-![](https://cdn-images-1.medium.com/max/640/1*jA_C6sBZxS51oYifpJZRCw.gif)
-
 Dijitalleşmeyle beraber çoklu medya içeriklerin hikaye anlatımını zenginleştirmede kullanıldığını görüyoruz. Görsel, video, gifler, interaktif grafikler, kaydırma hikayeciliği (scrollytelling) derken metinden uzaklaşan bir habercilik pratiği de ortaya konuluyor. Bu durum her zaman haber metnini boyunduruğu altına alan bir çalışma pratiği oluşturacak değil. Bazı durumlarda metnin yerini almak yerine haber metnini zenginleştirme işlevi de bulunuyor. Bu örneklerden birisini Northwestern Universitesi bünyesinde bulunan Knight Lab’in geliştirdiği araçlardan Juxtapose ile yapmak mümkün. Juxtapose nedir? Gazetecilik pratiğinde nasıl kullanılabilir, nelere dikkat etmek gerekiyor bu yazıda anlatacağım.
 
 ***Ek not:*** *Bu yazıyı Üsküdar Üniversitesi’nde Gazetecilik bölümü öğrencilerine verdiğim İnternet Gazeteciliği dersi için de hazırlamaktayım. Başlangıç seviyesinde bilgiler içerebilir.*

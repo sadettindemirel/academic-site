@@ -8,9 +8,6 @@ tags_display: "Ggplot2, Veri Görselleştirme, Rstats, Data Visualization"
 original_url: https://medium.com/verijurnali/r-ekosisteminde-veri-gorsellestirme-6d6065c7e3f6
 original_source: Medium
 ---
-![Photo by Luke Chesser on Unsplash](https://cdn-images-1.medium.com/max/1024/0*FWi77i7RpFlhaGtf)
-*Photo by Luke Chesser on Unsplash*
-
 ## R Ekosisteminde Veri Nasıl Görselleştirilir?
 
 R istatistik dili, verinin elde edilmesinden görselleştirilmesine ve sunumuna kadar birçok süreçte işlevsel olarak kullanılan ender araçlardan birisi. Bunu, açık kaynak bir yazılım olması, canlı bir topluluğa sahip olması ve kapsamlı paketlerine borçlu. Özellikle [ggplot2](https://ggplot2.tidyverse.org/index.html) şu anda R kullanıcıları tarafından en çok kullanılan paketlerden birisi. R ekosisteminin temel görselleştirme paketlerinin aksine zengin bir grafik kütüphanesine sahip ve veriyle çalışmayı kolaylaştıran tidyverse evreninin bir parçası. Bunun yanı sıra ggplot2 üçüncü parti eklentiler ( [plotly](https://plot.ly/ggplot2/), [highcharts](http://www.htmlwidgets.org/showcase_highcharts.html)) ve paketlerle ( [gganimate](http://www.ggplot2-exts.org/gganimate.html), [shiny](https://shiny.rstudio.com/)) interaktif ve animasyonlu görselleştirmeler oluşturma imkânı da sunuyor. Peki ggplot2 ile veri nasıl görselleştirilir ve ggplot2'nun püf noktaları nelerdir?

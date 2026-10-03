@@ -8,9 +8,6 @@ tags_display: "R Programming, Dplyr, Veri Analiz, Veri Gazeteciliği"
 original_url: https://medium.com/verijurnali/r-ekosisteminde-veri-analizi-abdd3fc75493
 original_source: Medium
 ---
-![Photo by Ilya Pavlov on Unsplash](https://cdn-images-1.medium.com/max/1024/0*Srg4Ex1b0eKt46QY)
-*Photo by Ilya Pavlov on Unsplash*
-
 R, bugün akademiden, şirketlere, istatikçilerden, gazetecilere birçok meslek alanında özellikle veri işleme ve analiz etme amaçlı olarak kullanılıyor. R yazılımını bu konuda özel kılan yegâne şey açık kaynak bir araç olduğu için kullanıcıları tarafından geliştirilen kapsamlı paketlere sahip olması. Bunlardan birisi olan [Dplyr](https://dplyr.tidyverse.org/), R evreninde veri işlemeyi ve veri analizi sürecini kolaylaştıran ve en çok kullanılan paketlerden birisi. Peki dplyr tam olarak nedir? Gazetecilerin hangi işine yarar? Veri işleme ve analizinde nasıl kullanılır?
 
 Dplyr’i, sözlük anlamıyla “veri işlemenin temel prensipleri” veya “veri işleme grameri” olarak çevirebiliriz. Hadley Wickham tarafından geliştirilen R’da sıklıkla kullanılan paketlerin koleksiyonundan oluşan [tidyverse](https://www.tidyverse.org/) evreninin bir parçası.

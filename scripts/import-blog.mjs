@@ -415,7 +415,11 @@ for (const post of allPosts) {
     const path = new URL(`${post.slug}.md`, BLOG_DIR);
     const text = isNew ? post.file : await readFile(path, "utf8");
     const end = text.indexOf("\n---", 3) + 4;
-    let body = fixLinks(labelCodeBlocks(text.slice(end)), localUrl);
+    // Kapak görseli sayfanın üstünde zaten gösteriliyor; gövde aynı görselle başlıyorsa tekrarlama
+    const thumbnail = (text.slice(0, end).match(/^thumbnail:\s*(\S+)/m) || [])[1];
+    let body = text.slice(end);
+    if (thumbnail) body = body.replace(/^\s*!\[[^\]]*\]\((\S+?)\)\n(\*[^\n]*\*\n)?\n*/, (m, src) => src === thumbnail ? "\n" : m);
+    body = fixLinks(labelCodeBlocks(body), localUrl);
     if (isNew || CHECK_ALL_LINKS) body = await archiveDeadLinks(body, post.date);
     const result = text.slice(0, end) + body;
     if (DRY_RUN || (!isNew && result === text)) continue;

@@ -8,9 +8,6 @@ tags_display: "Dataviz, Veri Görselleştirme, İnceleme, Data Visualization"
 original_url: https://medium.com/verijurnali/i%CC%87nceleme-%C3%BCcretsiz-veri-g%C3%B6rselle%C5%9Ftirme-ara%C3%A7lar%C4%B1-7f53efc82044
 original_source: Medium
 ---
-![Photo by Stephen Dawson on Unsplash](https://cdn-images-1.medium.com/max/1024/0*e-WmZ0lbczpfurnd)
-*Photo by Stephen Dawson on Unsplash*
-
 Veri görselleştirme, son yıllarda gittikçe önemli hale gelen bir disiplin ve beceri olarak karşımıza çıkıyor. Özellikle giderek artan veri miktarı, bu veriyi anlamlı hale getirme ve yorumlama ihtiyacınının bunda büyük bir payı var. Üstelik geçmişe göre veri analizi ve görselleştirme yazılımları ve araçlarına erişim sağlama daha üst seviyelerde ve bu araçların çoğu açık kaynak veya belli bir seviyeye kadar ücretsiz olarak kullanılabiliyor
 
 Son 13 yıllık Google Trend verisine bakıldığında (*Bu yazı 2017 yılında kaleme alınmıştı*) 2008 yılından itibaren veri görselleştirme teriminin Google aramalarda payının arttığı görülüyor. 2017 yılında ise bu oran zirve noktasına ulaşmış. Her ne kadar 2004–2007 yılları arası düşüşün nedeni belirsiz olsa da 2008 yılından itibaren bariz bir artış olduğu söylenebilir.
