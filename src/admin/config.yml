@@ -37,6 +37,7 @@ collections:
           - { label: "Karşılama Metni (TR)", name: "greeting", widget: "string", default: "Merhaba, ben" }
           - { label: "Karşılama Metni (EN)", name: "greeting_en", widget: "string", default: "Hello, I am" }
           - { label: "E-posta", name: "email", widget: "string" }
+          - { label: "Detaylı Özgeçmiş Linki (CV butonu)", name: "cv_url", widget: "string", required: false }
           - { label: "Kısa Biyografi / Hero (TR)", name: "bio_summary", widget: "text" }
           - { label: "Kısa Biyografi / Hero (EN)", name: "bio_summary_en", widget: "text" }
           - label: "Hakkımda Paragrafları (TR)"
@@ -70,10 +71,12 @@ collections:
             name: "social_links"
             widget: "list"
             fields:
-              - { label: "Platform", name: "platform", widget: "select", options: ["email", "twitter", "linkedin", "medium", "researchgate", "googlescholar", "orcid", "webofscience", "github", "youtube"] }
+              - { label: "Platform", name: "platform", widget: "select", options: ["email", "twitter", "linkedin", "medium", "researchgate", "googlescholar", "scopus", "orcid", "webofscience", "github", "youtube"] }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-linkedin-in" }
               - { label: "Etiket", name: "label", widget: "string" }
+              - { label: "Grup", name: "group", widget: "select", options: [{ label: "Sosyal (yuvarlak ikon)", value: "social" }, { label: "Akademik profil (etiketli buton)", value: "academic" }], default: "social" }
+              - { label: "Ana sayfada göster", name: "hero", widget: "boolean", default: true, hint: "Kapalıysa sadece alt bilgide (footer) görünür" }
           - label: "Yazı Platformları"
             name: "writings"
             widget: "list"
@@ -85,6 +88,40 @@ collections:
               - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-medium" }
               - { label: "Buton Metni (TR)", name: "button_text", widget: "string" }
               - { label: "Buton Metni (EN)", name: "button_text_en", widget: "string" }
+
+  - name: "metrics"
+    label: "Atıf Metrikleri"
+    files:
+      - name: "metrics_data"
+        label: "Scopus & Google Scholar"
+        file: "src/_data/metrics.json"
+        fields:
+          - { label: "Son Güncelleme", name: "updated", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "GitHub Action her pazartesi otomatik günceller. Elle de değiştirebilirsiniz." }
+          - label: "Google Scholar"
+            name: "scholar"
+            widget: "object"
+            fields:
+              - { label: "Atıf", name: "citations", widget: "number", value_type: "int", required: false }
+              - { label: "h-indeks", name: "h_index", widget: "number", value_type: "int", required: false }
+              - { label: "i10-indeks", name: "i10_index", widget: "number", value_type: "int", required: false }
+              - { label: "Doküman", name: "documents", widget: "number", value_type: "int", required: false }
+              - { label: "Profil Linki", name: "url", widget: "string" }
+              - label: "Yıllara Göre Atıflar (grafik)"
+                name: "by_year"
+                widget: "list"
+                required: false
+                summary: "{{fields.year}}: {{fields.citations}}"
+                fields:
+                  - { label: "Yıl", name: "year", widget: "number", value_type: "int" }
+                  - { label: "Atıf", name: "citations", widget: "number", value_type: "int" }
+          - label: "Scopus"
+            name: "scopus"
+            widget: "object"
+            fields:
+              - { label: "Atıf", name: "citations", widget: "number", value_type: "int", required: false }
+              - { label: "h-indeks", name: "h_index", widget: "number", value_type: "int", required: false }
+              - { label: "Doküman", name: "documents", widget: "number", value_type: "int", required: false }
+              - { label: "Profil Linki", name: "url", widget: "string" }
 
   - name: "publications"
     label: "Yayınlar"
@@ -107,4 +144,6 @@ collections:
                   - { label: "Başlık", name: "title", widget: "string" }
                   - { label: "Yazarlar", name: "authors", widget: "string" }
                   - { label: "Yayın Yeri / Dergi", name: "venue", widget: "string" }
+                  - { label: "Yıl", name: "year", widget: "number", value_type: "int", required: false }
                   - { label: "DOI Linki", name: "doi", widget: "string", required: false }
+                  - { label: "Ana sayfada öne çıkar", name: "featured", widget: "boolean", default: false, required: false }

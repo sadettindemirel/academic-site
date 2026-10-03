@@ -1,55 +1,7 @@
-<!DOCTYPE html>
-<html lang="tr" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Öğr. Üyesi {{ site.name }} | Akademik Profil</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet">
-
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-
-    <!-- Header & Navigation -->
-    <header class="header" id="header">
-        <div class="container nav-container">
-            <a href="#home" class="logo">SD.</a>
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
-                    <li><a href="#cv" class="nav-link" data-tr="Özgeçmiş" data-en="CV">Özgeçmiş</a></li>
-                    <li><a href="/publications/" class="nav-link" data-tr="Yayınlarım" data-en="Publications">Yayınlarım</a></li>
-                    <li><a href="/blog/" class="nav-link">Blog</a></li>
-                    <li><a href="#iletisim" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <button class="toggle-btn" id="langToggle" title="Switch language" aria-label="Switch language">
-                    <span class="lang-label">EN</span>
-                </button>
-                <button class="toggle-btn" id="themeToggle" title="Tema değiştir" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
+---
+layout: base.njk
+---
+{% from "macros.njk" import linkIcon %}
         <!-- Hero Section -->
         <section id="home" class="hero section">
             <div class="container hero-container">
@@ -60,21 +12,30 @@
                         <h2 class="title" data-tr="{{ site.title }}" data-en="{{ site.title_en }}">{{ site.title }}</h2>
                         <p class="bio-summary" data-tr="{{ site.bio_summary }}" data-en="{{ site.bio_summary_en }}">{{ site.bio_summary }}</p>
 
-                        <div class="social-links">
-                            {% for link in site.social_links %}
-                            {% if link.platform == "twitter" %}
-                            <a href="{{ link.url }}" class="social-icon" target="_blank"
-                                rel="noopener noreferrer" title="{{ link.label }}" aria-label="{{ link.label }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                    viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                                </svg>
+                        <div class="hero-actions">
+                            {% if site.cv_url %}
+                            <a href="{{ site.cv_url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-lines"></i> <span data-tr="Detaylı Özgeçmiş" data-en="Full CV">Detaylı Özgeçmiş</span>
                             </a>
-                            {% else %}
-                            <a href="{{ link.url }}" class="social-icon" target="_blank"
-                                rel="noopener noreferrer" aria-label="{{ link.label }}">
-                                <i class="{{ link.icon }}"></i>
+                            {% endif %}
+                            <div class="social-links">
+                                {% for link in site.social_links %}
+                                {% if link.group != "academic" and link.hero %}
+                                <a href="{{ link.url }}" class="social-icon" target="_blank" rel="noopener noreferrer"
+                                    title="{{ link.label }}" aria-label="{{ link.label }}">{{ linkIcon(link) }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        {% include "metrics.njk" %}
+
+                        <div class="profile-links">
+                            <span class="profile-links-label" data-tr="Akademik profiller" data-en="Academic profiles">Akademik profiller</span>
+                            {% for link in site.social_links %}
+                            {% if link.group == "academic" and link.hero %}
+                            <a href="{{ link.url }}" class="profile-pill" target="_blank" rel="noopener noreferrer">
+                                {{ linkIcon(link) }} {{ link.label }}
                             </a>
                             {% endif %}
                             {% endfor %}
@@ -106,8 +67,33 @@
             </div>
         </section>
 
+        <!-- Featured Publications & Citations -->
+        <section id="yayinlar" class="home-publications section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-tr="Öne Çıkan Yayınlar" data-en="Selected Publications">Öne Çıkan Yayınlar</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="home-pubs">
+                    <div class="publications-list">
+                        {% for pub in publications.categories | featuredPubs %}
+                        {% include "pub-card.njk" %}
+                        {% endfor %}
+                    </div>
+                    <aside class="home-pubs-chart">
+                        {% include "citation-chart.njk" %}
+                    </aside>
+                </div>
+                <div class="home-pubs-more">
+                    <a href="/publications/" class="btn btn-outline">
+                        <span data-tr="Tüm Yayınlar" data-en="All Publications">Tüm Yayınlar</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- CV Section -->
-        <section id="cv" class="cv section">
+        <section id="cv" class="cv section bg-light">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-tr="Özgeçmiş" data-en="Curriculum Vitae">Özgeçmiş</h2>
@@ -151,13 +137,21 @@
                             </ul>
                         </div>
                     </div>
+
+                    {% if site.cv_url %}
+                    <div class="download-cv">
+                        <a href="{{ site.cv_url }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-lines"></i> <span data-tr="Detaylı Özgeçmiş (YÖK)" data-en="Full CV (YÖK)">Detaylı Özgeçmiş (YÖK)</span>
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </section>
 
 
         <!-- Contact Section -->
-        <section id="iletisim" class="contact section bg-light">
+        <section id="iletisim" class="contact section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title" data-tr="İletişim" data-en="Contact">İletişim</h2>
@@ -171,10 +165,12 @@
                             href="mailto:{{ site.email }}" class="inline-link">e-posta adresim</a>
                         üzerinden bana ulaşabilirsiniz.
                     </p>
-                    <form action="https://formsubmit.co/{{ site.formsubmit_token }}" method="POST" class="contact-form" id="contactForm">
-                        <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı!">
+                    <!-- Netlify Forms: submissions appear in Netlify > Forms; email notifications are set there -->
+                    <form name="iletisim" method="POST" action="/tesekkurler/" data-netlify="true"
+                        netlify-honeypot="bot-field" class="contact-form" id="contactForm">
+                        <input type="hidden" name="form-name" value="iletisim">
                         <!-- Honeypot -->
-                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                        <p style="display:none"><label>Boş bırakın: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
                         <div class="form-group">
                             <label for="name" data-tr="Adınız Soyadınız" data-en="Full Name">Adınız Soyadınız</label>
                             <input type="text" id="name" name="name" class="form-control" required
@@ -207,35 +203,3 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <p><span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">&copy; <span id="currentYear"></span> Dr. {{ site.name }}. Tüm hakları saklıdır.</span></p>
-            </div>
-            <div class="footer-social">
-                {% for link in site.social_links %}
-                {% if link.platform == "twitter" %}
-                <a href="{{ link.url }}" target="_blank" title="{{ link.label }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"
-                        style="position: relative; top: 2px;">
-                        <path fill="currentColor"
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </a>
-                {% elif link.platform != "email" %}
-                <a href="{{ link.url }}" target="_blank"><i class="{{ link.icon }}"></i></a>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </footer>
-
-    <!-- Custom Script -->
-    <script src="/script.js"></script>
-
-</body>
-
-</html>

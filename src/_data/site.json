@@ -4,49 +4,65 @@
       "platform": "email",
       "url": "mailto:sadettin.demirel@uskudar.edu.tr",
       "icon": "fas fa-envelope",
-      "label": "Email"
-    },
-    {
-      "platform": "twitter",
-      "url": "https://x.com/demirelsadettin",
-      "icon": "x-twitter",
-      "label": "X (Twitter)"
+      "label": "Email",
+      "group": "social",
+      "hero": true
     },
     {
       "platform": "linkedin",
       "url": "https://www.linkedin.com/in/sadettin-demirel/",
       "icon": "fab fa-linkedin-in",
-      "label": "LinkedIn"
+      "label": "LinkedIn",
+      "group": "social",
+      "hero": true
+    },
+    {
+      "platform": "twitter",
+      "url": "https://x.com/demirelsadettin",
+      "icon": "x-twitter",
+      "label": "X (Twitter)",
+      "group": "social",
+      "hero": true
     },
     {
       "platform": "medium",
       "url": "https://medium.com/verijurnali",
       "icon": "fab fa-medium-m",
-      "label": "Medium"
-    },
-    {
-      "platform": "researchgate",
-      "url": "https://www.researchgate.net/profile/Sadettin-Demirel-2",
-      "icon": "fab fa-researchgate",
-      "label": "ResearchGate"
+      "label": "Medium",
+      "group": "social",
+      "hero": false
     },
     {
       "platform": "googlescholar",
-      "url": "https://scholar.google.com/citations?hl=tr&user=wQpGDFQAAAAJ&view_op=list_works&sortby=pubdate",
+      "url": "https://scholar.google.com/citations?user=wQpGDFQAAAAJ&hl=en",
       "icon": "fas fa-graduation-cap",
-      "label": "Google Scholar"
+      "label": "Google Scholar",
+      "group": "academic",
+      "hero": true
     },
     {
-      "platform": "orcid",
-      "url": "https://orcid.org/0000-0002-3282-1706",
-      "icon": "fab fa-orcid",
-      "label": "ORCID"
+      "platform": "scopus",
+      "url": "https://www.scopus.com/authid/detail.uri?authorId=57221689330",
+      "icon": "fas fa-chart-bar",
+      "label": "Scopus",
+      "group": "academic",
+      "hero": true
     },
     {
       "platform": "webofscience",
       "url": "https://www.webofscience.com/wos/author/record/IZQ-4684-2023",
       "icon": "fas fa-flask",
-      "label": "Web of Science"
+      "label": "Web of Science",
+      "group": "academic",
+      "hero": true
+    },
+    {
+      "platform": "researchgate",
+      "url": "https://www.researchgate.net/profile/Sadettin-Demirel-2",
+      "icon": "fab fa-researchgate",
+      "label": "ResearchGate",
+      "group": "academic",
+      "hero": true
     }
   ],
   "education": [
@@ -81,15 +97,14 @@
   ],
   "name": "Sadettin Demirel",
   "greeting_en": "Hello, I am",
-  "bio_summary": "Üsküdar Üniversitesi Yeni Medya ve İletişim bölümünde Dr. Öğr. Üyesi olarak görev yapmaktayım. Yeni medya, veri gazeteciliği, programlamalı sosyal bilimler ve metin madenciliği alanlarında akademik çalışmalar yürütüyorum.",
-  "title_en": "Scholar",
+  "bio_summary": "Yeni medya, sosyal ağlar, veri gazeteciliği, programlamalı sosyal bilimler, metin madenciliği ve duygu analizi alanlarında akademik çalışmalar yürütüyorum.",
+  "title_en": "Assistant Professor",
   "about_paragraphs_en": [
     "Sadettin Demirel completed his undergraduate studies at Kadir Has University, Department of Public Relations and Publicity, in 2016. He received his first master's degree from the New Media Department at Kadir Has University in 2018.",
     "In 2019, as a Swedish Institute scholar, he completed his second master's in Investigative Journalism at the University of Gothenburg. In 2023, he earned his doctoral degree from Istanbul University's Journalism Ph.D. program with his dissertation titled \"Analyzing the Relationship Between Emotions and User Interactions in Twitter News: A Multi-Method Study.\"",
     "His academic interests include new media, text mining, computational social sciences, sentiment analysis, social networks, and data journalism.",
     "Actively engaged in civil society, Demirel is the founder and board member of the Istanbul-based Data Literacy Association (VOYD), established to promote data literacy, support data journalism, and advocate for open data initiatives in Turkey."
   ],
-  "formsubmit_token": "25476d1c7f7d1ed9f813acb4c4c9041f",
   "about_paragraphs": [
     "Sadettin Demirel, lisans eğitimini Kadir Has Üniversitesi Halkla İlişkiler ve Tanıtım Bölümü'nde, 2016 yılında tamamlamıştır. İlk yüksek lisans derecesini, Kadir Has Üniversitesi Yeni Medya Bölümü'nde 2018 yılında almıştır.",
     "2019 yılında, İsveç Enstitüsü bursiyeri olarak, Gothenburg Üniversitesi'nde Araştırmacı Gazetecilik alanında ikinci yüksek lisans eğitimini tamamlamıştır. 2023 yılında, İstanbul Üniversitesi Gazetecilik Doktora Ana Bilim Dalı'nda 'Twitter'daki Haberlerde Duygular ve Kullanıcı Etkileşimleri Arasındaki İlişkinin Çözümlenmesi: Çok Yöntemli Bir Çalışma' başlıklı araştırmasıyla doktor unvanı almıştır.",
@@ -125,9 +140,9 @@
       "button_text_en": "Read Articles"
     }
   ],
-  "title": "Akademisyen",
+  "title": "Dr. Öğr. Üyesi",
   "greeting": "Merhaba, ben",
-  "bio_summary_en": "I am an Assistant Professor at the Department of New Media and Communication, Üsküdar University. I conduct academic research in new media, data journalism, computational social sciences, and text mining.",
+  "bio_summary_en": "I conduct academic research on new media, social networks, data journalism, computational social science, text mining and sentiment analysis.",
   "email": "sadettin.demirel@uskudar.edu.tr",
   "career": [
     {
@@ -167,5 +182,6 @@
       "institution": "Açık Veri ve Veri Gazeteciliği Derneği",
       "institution_en": "Open Data and Data Journalism Association"
     }
-  ]
+  ],
+  "cv_url": "https://fts.uskudar.edu.tr/yok-cv/sadettin-demirel"
 }

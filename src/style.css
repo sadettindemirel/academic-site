@@ -12,6 +12,7 @@
     --color-secondary: #44403c;     /* Dark warm stone */
     --color-accent: #c2410c;        /* Warm terracotta / burnt orange */
     --color-border: #e7e5e4;        /* Soft stone border */
+    --chart-bar: #c2410c;           /* Citation chart columns (validated vs. white surface) */
 
     /* Typography */
     --font-heading: 'Playfair Display', serif;
@@ -44,6 +45,8 @@
     --color-secondary: #d6d3d1;     /* Soft warm stone */
     --color-accent: #fb923c;        /* Luminous terracotta amber */
     --color-border: #44403c;        /* Dark warm stone border */
+    --chart-bar: #ea580c;           /* Citation chart columns (validated vs. dark surface) */
+    color-scheme: dark;
 
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
@@ -288,11 +291,10 @@ p {
    Hero Section
    ========================================================================== */
 .hero {
-    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    /* Offset for header */
+    padding: calc(80px + var(--spacing-lg)) 0 var(--spacing-lg);
+    /* 80px offsets the fixed header */
 }
 
 .hero-content {
@@ -336,8 +338,60 @@ p {
     margin-bottom: var(--spacing-md);
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.25rem;
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.profile-links-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+    width: 100%;
+}
+
+.profile-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+}
+
+.profile-pill i {
+    color: var(--color-text-light);
+    transition: var(--transition);
+}
+
+.profile-pill:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.profile-pill:hover i {
+    color: var(--color-accent);
+}
+
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -406,6 +460,85 @@ p {
 
 .experience-badge i {
     color: var(--color-accent);
+}
+
+/* Citation Metrics (Scopus / Google Scholar) */
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.metric-card {
+    flex: 1 1 220px;
+    max-width: 300px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 0.9rem 1.2rem;
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.metric-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.metric-source {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-light);
+    margin-bottom: 0.4rem;
+}
+
+.metric-source i {
+    color: var(--color-accent);
+    margin-right: 4px;
+}
+
+.metric-values {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+
+.metrics-updated {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+}
+
+.metrics-centered {
+    text-align: center;
+}
+
+.metrics-centered .metrics,
+.metrics-centered .metric-values {
+    justify-content: center;
 }
 
 /* ==========================================================================
@@ -643,6 +776,15 @@ p {
     border: 1px solid var(--color-border);
     transition: var(--transition);
     position: relative;
+}
+
+.pub-year {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    margin-bottom: 4px;
 }
 
 a.pub-card-link {
@@ -898,6 +1040,200 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   Home: Featured Publications + Citation Chart
+   ========================================================================== */
+.home-pubs {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: var(--spacing-md);
+    align-items: start;
+}
+
+.home-pubs .publications-list {
+    max-width: none;
+    gap: var(--spacing-sm);
+}
+
+.home-publications .pub-card {
+    background-color: var(--color-surface);
+}
+
+.home-pubs-more {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+/* CV cards sit on the light section now */
+.bg-light .cv-card {
+    background-color: var(--color-bg);
+}
+
+/* Publications page overview: metrics + chart side by side */
+.pubs-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--spacing-md);
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* ==========================================================================
+   Citation Chart (Google Scholar citations per year)
+   ========================================================================== */
+.cite-chart {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.25rem 0.75rem;
+    overflow: hidden;
+}
+
+.cite-chart-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    margin-bottom: 2.25rem; /* room for the hover tooltip above the plot */
+}
+
+.cite-chart-source {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.cite-chart-plot {
+    position: relative;
+    height: 170px;
+    margin: 0 0 1.75rem 2rem; /* left: tick labels, bottom: year labels */
+}
+
+.cite-chart-grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.cite-chart-grid span {
+    position: absolute;
+    right: 100%;
+    transform: translateY(-50%);
+    padding-right: 6px;
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    font-variant-numeric: tabular-nums;
+}
+
+.cite-chart-bars {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    gap: 2px;
+}
+
+.cite-chart-col {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    outline: none;
+}
+
+.cite-chart-bar {
+    width: 100%;
+    max-width: 24px;
+    background-color: var(--chart-bar);
+    border-radius: 4px 4px 0 0;
+    transition: filter 0.2s ease;
+}
+
+.cite-chart-col.is-partial .cite-chart-bar {
+    opacity: 0.5;
+}
+
+.cite-chart-value {
+    position: absolute;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.cite-chart-year {
+    position: absolute;
+    top: 100%;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+}
+
+.cite-chart-tip {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 2;
+}
+
+/* Keep edge tooltips inside the card */
+.cite-chart-col:nth-child(-n+2) .cite-chart-tip {
+    left: 0;
+    transform: none;
+}
+
+.cite-chart-col:nth-last-child(-n+2) .cite-chart-tip {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+.cite-chart-col:hover .cite-chart-tip,
+.cite-chart-col:focus-visible .cite-chart-tip {
+    opacity: 1;
+}
+
+.cite-chart-col:hover .cite-chart-bar,
+.cite-chart-col:focus-visible .cite-chart-bar {
+    filter: brightness(1.15);
+}
+
+.cite-chart-col:focus-visible .cite-chart-year {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.cite-chart-note {
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* Thank-you page after contact form */
+.thanks-page {
+    padding-top: calc(80px + var(--spacing-xl));
+    min-height: 70vh;
+    text-align: center;
+}
+
+/* ==========================================================================
    Responsive Design
    ========================================================================== */
 @media (max-width: 900px) {
@@ -908,6 +1244,25 @@ textarea.form-control {
     }
 
     .social-links {
+        justify-content: center;
+    }
+
+    .hero-image-container {
+        flex: 0 0 auto;
+    }
+
+    .hero-actions,
+    .profile-links {
+        justify-content: center;
+    }
+
+    .home-pubs,
+    .pubs-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics,
+    .metric-values {
         justify-content: center;
     }
 
@@ -1078,7 +1433,8 @@ textarea.form-control {
 /* ==========================================================================
    Blog Post
    ========================================================================== */
-.blog-post {
+.blog-post,
+.blog-listing {
     padding-top: calc(80px + var(--spacing-lg));
 }
 

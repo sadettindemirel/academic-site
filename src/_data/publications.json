@@ -8,49 +8,60 @@
                 {
                     "title": "State apparatus vs. surrogate sphere: a comparative analysis of domestic and international media in Turkish elections",
                     "authors": "Demirel, S., & Bulur Demirel, N.",
-                    "venue": "Journal of Information Technology & Politics, 1–19, 2026",
-                    "doi": "https://doi.org/10.1080/19331681.2026.2630181"
+                    "venue": "Journal of Information Technology & Politics, 1–19",
+                    "year": 2026,
+                    "doi": "https://doi.org/10.1080/19331681.2026.2630181",
+                    "featured": true
                 },
                 {
                     "title": "From Optimism to Concern: Unveiling Sentiments and Perceptions Surrounding ChatGPT on Twitter",
                     "authors": "Demirel, S., Kahraman-Gokalp, E., & Gündüz, U.",
-                    "venue": "International Journal of Human–Computer Interaction, 41(12), 7292–7314, 2025",
-                    "doi": "https://doi.org/10.1080/10447318.2024.2392964"
+                    "venue": "International Journal of Human–Computer Interaction, 41(12), 7292–7314",
+                    "year": 2025,
+                    "doi": "https://doi.org/10.1080/10447318.2024.2392964",
+                    "featured": true
                 },
                 {
                     "title": "Metaverse-related perceptions and sentiments on Twitter: Evidence from text mining and network analysis",
                     "authors": "Gündüz, U., & Demirel, S.",
-                    "venue": "Electronic Commerce Research, 25(3), 1453-1483, 2025",
-                    "doi": "https://doi.org/10.1007/s10660-023-09745-x"
+                    "venue": "Electronic Commerce Research, 25(3), 1453-1483",
+                    "year": 2025,
+                    "doi": "https://doi.org/10.1007/s10660-023-09745-x",
+                    "featured": true
                 },
                 {
                     "title": "Social Perception of Artificial Intelligence on Twitter: A Comparative Study on Global South and Global North Countries",
                     "authors": "Demirel, S., Çakıcı, Z., & Bulur, N.",
-                    "venue": "Sotsiologicheskoe Obozrenie / Russian Sociological Review, 24(4), 48-79, 2024",
+                    "venue": "Sotsiologicheskoe Obozrenie / Russian Sociological Review, 24(4), 48-79",
+                    "year": 2024,
                     "doi": "https://doi.org/10.17323/1728-192x-2024-4-48-79"
                 },
                 {
                     "title": "A text mining analysis of the change in status of the Hagia Sophia on Twitter: The political discourse and its reflections on the public opinion",
                     "authors": "Demirel, S., Kahraman, E., & Gündüz, U.",
-                    "venue": "Atlantic Journal of Communication, 32(1), 63-90, 2024",
+                    "venue": "Atlantic Journal of Communication, 32(1), 63-90",
+                    "year": 2024,
                     "doi": "https://doi.org/10.1080/15456870.2022.2093354"
                 },
                 {
                     "title": "COVID-19 vaccines in twitter ecosystem: Analyzing perceptions and attitudes by sentiment and text analysis method",
                     "authors": "Kahraman, E., Demirel, S., & Gündüz, U.",
-                    "venue": "Journal of Public Health, 2024",
+                    "venue": "Journal of Public Health",
+                    "year": 2024,
                     "doi": "https://doi.org/10.1007/s10389-023-02078-x"
                 },
                 {
                     "title": "Exploring the surge of negativity during the COVID-19 pandemic: Computational text and sentiment analysis across eight newsrooms' tweets",
                     "authors": "Kahraman-Gokalp, E., Demirel, S., & Gündüz, U.",
-                    "venue": "Atlantic Journal of Communication, 32(2), 298-324, 2024",
+                    "venue": "Atlantic Journal of Communication, 32(2), 298-324",
+                    "year": 2024,
                     "doi": "https://doi.org/10.1080/15456870.2023.2293169"
                 },
                 {
                     "title": "Exploring the concept of financial domination on social media: Sentiment and text analysis on Twitter",
                     "authors": "Gündüz, U., Demirel, S., & Tombul, I.",
-                    "venue": "Atlantic Journal of Communication, 1–24, 2024",
+                    "venue": "Atlantic Journal of Communication, 1–24",
+                    "year": 2024,
                     "doi": "https://doi.org/10.1080/15456870.2023.2178000"
                 }
             ]
@@ -63,31 +74,36 @@
                 {
                     "title": "Türkiye’de Alevilerin Medyada Temsili: Haber Tweetleri Üzerine Hesaplamalı Bir Analiz",
                     "authors": "Demirel, S.",
-                    "venue": "Yeni Medya Dergisi, (20), 417–442, 2026",
+                    "venue": "Yeni Medya Dergisi, (20), 417–442",
+                    "year": 2026,
                     "doi": "https://doi.org/10.55609/yenimedya.1865257"
                 },
                 {
                     "title": "Sentiment Analysis in Communication Studies: A Bibliometric Study on Web of Science Indexed Articles",
                     "authors": "Demirel, S.",
-                    "venue": "İletişim Kuram ve Araştırma Dergisi, 73, 302-330, 2026",
+                    "venue": "İletişim Kuram ve Araştırma Dergisi, 73, 302-330",
+                    "year": 2026,
                     "doi": "https://doi.org/10.47998/ikad.1835598"
                 },
                 {
                     "title": "Media Representations of Climate Change in Türkiye: A Multi-Method Study",
                     "authors": "Bulur, N., Demirel, S., & Çakıcı, Z.",
-                    "venue": "Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 13(1), 327-357, 2025",
+                    "venue": "Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 13(1), 327-357",
+                    "year": 2025,
                     "doi": "https://doi.org/10.19145/e-gifder.1582900"
                 },
                 {
                     "title": "Exploring Reflections of the 2023 Kahramanmaraş Earthquake on X: A Computational Study on Türkiye and Syria",
                     "authors": "Demirel, S., Çakıcı, Z., & Bulur, N.",
-                    "venue": "Akademik İncelemeler Dergisi, 20(1), 143-171, 2025",
+                    "venue": "Akademik İncelemeler Dergisi, 20(1), 143-171",
+                    "year": 2025,
                     "doi": "https://doi.org/10.17550/akademikincelemeler.1593038"
                 },
                 {
                     "title": "World Health Organization's Twitter Use Before and During Covid-19 Pandemic: Sentiment and Textual Analysis of Tweets",
                     "authors": "Demirel, S., & Gündüz, U.",
-                    "venue": "Intermedia International E-journal, 2022",
+                    "venue": "Intermedia International E-journal",
+                    "year": 2022,
                     "doi": "https://doi.org/10.56133/intermedia.1163032"
                 }
             ]
@@ -100,49 +116,57 @@
                 {
                     "title": "Simulating the Frontline in the Post-Truth Age: Sound, Spectacle, and the Satire of the Journalistic Hero in Special Correspondents",
                     "authors": "Demirel, S.",
-                    "venue": "In E. E. Ercan (Ed.), Representations of Journalism in Movie Culture (pp. 59–84). IGI Global Scientific Publishing, 2026",
+                    "venue": "In E. E. Ercan (Ed.), Representations of Journalism in Movie Culture (pp. 59–84). IGI Global Scientific Publishing",
+                    "year": 2026,
                     "doi": "https://doi.org/10.4018/979-8-3373-9008-6.ch003"
                 },
                 {
                     "title": "Mapping the Fight Against Information Disorders in Turkey: A Computational Analysis of Fact-Checkers' Tweets",
                     "authors": "Demirel, S.",
-                    "venue": "In E. E. Ercan (Ed.), Journalism in the Post-Truth Era (pp. 175-210). IGI Global Scientific Publishing, 2025",
+                    "venue": "In E. E. Ercan (Ed.), Journalism in the Post-Truth Era (pp. 175-210). IGI Global Scientific Publishing",
+                    "year": 2025,
                     "doi": "https://doi.org/10.4018/979-8-3373-2607-8.ch008"
                 },
                 {
                     "title": "The Reign of Football in Turkish Sports Coverage: Multi-Method Analysis of X Posts of Four Media Outlets",
                     "authors": "Demirel, S.",
-                    "venue": "ISBN: 9786253853419, 2025",
+                    "venue": "ISBN: 9786253853419",
+                    "year": 2025,
                     "doi": ""
                 },
                 {
                     "title": "Utilizing Artificial Intelligence for Text Classification in Communication Sciences: Reliability of ChatGPT Models in Turkish Texts",
                     "authors": "Demirel, S., Bulur, N., & Çakıcı, Z.",
-                    "venue": "In D. Darwish (Ed.), Design and Development of Emerging Chatbot Technology (pp. 218-235). IGI Global, 2024",
+                    "venue": "In D. Darwish (Ed.), Design and Development of Emerging Chatbot Technology (pp. 218-235). IGI Global",
+                    "year": 2024,
                     "doi": "https://doi.org/10.4018/979-8-3693-1830-0.ch013"
                 },
                 {
                     "title": "Twitter Kullanıcılarının Dijital Mahremiyet Algısının Metin Madenciliği Yöntemleriyle İncelenmesi",
                     "authors": "Demirel, S., & Gündüz, U.",
-                    "venue": "In E. Kahraman Gökalp & İ. Yıldız, Dijital Mahremiyetin Boyutları (pp. 1-21). Istanbul University Press, 2024",
+                    "venue": "In E. Kahraman Gökalp & İ. Yıldız, Dijital Mahremiyetin Boyutları (pp. 1-21). Istanbul University Press",
+                    "year": 2024,
                     "doi": "https://doi.org/10.26650/B/SSc5SSc20.2024.030.001"
                 },
                 {
                     "title": "Sosyal Medya ve Aktif Kullanıcı",
                     "authors": "Demirel, S.",
-                    "venue": "Eğitim Yayınevi, 2024",
+                    "venue": "Eğitim Yayınevi",
+                    "year": 2024,
                     "doi": ""
                 },
                 {
                     "title": "Anna Politkovskaya, Putin Rusyasına Karşı",
                     "authors": "Demirel, S.",
-                    "venue": "In Ö. Gönenç & M. Özdemir (Eds.), Dünya Liderleri ve Medya Savaşları (pp. 159-177). Literatürk Academia, 2022",
+                    "venue": "In Ö. Gönenç & M. Özdemir (Eds.), Dünya Liderleri ve Medya Savaşları (pp. 159-177). Literatürk Academia",
+                    "year": 2022,
                     "doi": ""
                 },
                 {
                     "title": "Haber İçin Veri Görselleştirirken Nelere Dikkat Etmeli?",
                     "authors": "Demirel, S.",
-                    "venue": "In A. Zinderen (Ed.), Veri Gazeteciliği (pp. 75-91). Nobel Bilimsel, 2021",
+                    "venue": "In A. Zinderen (Ed.), Veri Gazeteciliği (pp. 75-91). Nobel Bilimsel",
+                    "year": 2021,
                     "doi": ""
                 }
             ]
@@ -155,49 +179,57 @@
                 {
                     "title": "Twitter'da Göçmen Karşıtı Söylemlerin Duygu ve İçerik Analiziyle İncelenmesi: Europe Invasion Örneği",
                     "authors": "Çalışkan, M., & Demirel, S.",
-                    "venue": "12. Uluslararası İletişim Günleri: Dijital Çağda Medya ve İletişim Çalışmaları, Bakü, Azerbaycan, 2025",
+                    "venue": "12. Uluslararası İletişim Günleri: Dijital Çağda Medya ve İletişim Çalışmaları, Bakü, Azerbaycan",
+                    "year": 2025,
                     "doi": ""
                 },
                 {
                     "title": "İkinci Karabağ Savaşının Türk ve İran Kamu Medyasındaki Temsili: Karma Yöntemli Bir Çalışma",
                     "authors": "Rahmani, E., & Demirel, S.",
-                    "venue": "12. Uluslararası İletişim Günleri: Dijital Çağda Medya ve İletişim Çalışmaları, Bakü, Azerbaycan, 2025",
+                    "venue": "12. Uluslararası İletişim Günleri: Dijital Çağda Medya ve İletişim Çalışmaları, Bakü, Azerbaycan",
+                    "year": 2025,
                     "doi": ""
                 },
                 {
                     "title": "Federe Sosyal Ağlarda Yapay Zeka Tartışmaları: Mastodon Gönderileri Üzerine Bir Metin Analizi",
                     "authors": "Demirel, S.",
-                    "venue": "20. Uluslararası İletişim Sempozyumu (CIM2024), Eskişehir, 2024",
+                    "venue": "20. Uluslararası İletişim Sempozyumu (CIM2024), Eskişehir",
+                    "year": 2024,
                     "doi": ""
                 },
                 {
                     "title": "Küresel Güney Perspektifinden Üretken Yapay Zekâ: Türkiye'deki Gazetecilerin ve Haber Kuruluşlarının Tweetleri Üzerine Bir Analiz",
                     "authors": "Bulur, N., Demirel, S., & Çakıcı, Z.",
-                    "venue": "11. Uluslararası İletişim Günleri Dijital Eşitsizlik ve Veri Sömürgeciliği Sempozyumu, İstanbul, 2024",
+                    "venue": "11. Uluslararası İletişim Günleri Dijital Eşitsizlik ve Veri Sömürgeciliği Sempozyumu, İstanbul",
+                    "year": 2024,
                     "doi": ""
                 },
                 {
                     "title": "Türkiye'de Kamu Medyasında Partizanlaşma: Anadolu Ajansı ve TRT'nin Seçim Dönemi Tweetleri Üzerine Bir Analiz",
                     "authors": "Bulur, N.",
-                    "venue": "11. Uluslararası İletişim Günleri Dijital Eşitsizlik ve Veri Sömürgeciliği Sempozyumu, İstanbul, 2024",
+                    "venue": "11. Uluslararası İletişim Günleri Dijital Eşitsizlik ve Veri Sömürgeciliği Sempozyumu, İstanbul",
+                    "year": 2024,
                     "doi": ""
                 },
                 {
                     "title": "R/Privacy Reddit Topluluğu Örneğinde Yeni Medyanın Kolektif Zekâ Potansiyeli ve Yarattığı Yeni Direniş Pratikleri",
                     "authors": "Demirel, S., Ceylan, M., & Eğe, S.",
-                    "venue": "Yeni Medya Çalışmaları 6. Ulusal Kongre, 2023",
+                    "venue": "Yeni Medya Çalışmaları 6. Ulusal Kongre",
+                    "year": 2023,
                     "doi": ""
                 },
                 {
                     "title": "Twitter'da Dezenformasyon ve Yalan Haber Algısı Üzerine Bir Metin Madenciliği Çalışması: Lozan Antlaşmasının Gizli Maddeleri İddiasına Bir Bakış",
                     "authors": "Demirel, S., Kahraman, E., Gündüz, U., & Durmaz, G.",
-                    "venue": "19th International Symposium Communication in Millennium, 2022",
+                    "venue": "19th International Symposium Communication in Millennium",
+                    "year": 2022,
                     "doi": ""
                 },
                 {
                     "title": "User Attitudes and Perceptions on Change in Social Media Ownership: Elon Musk's Twitter Takeover",
                     "authors": "Kahraman, E., Demirel, S., Gündüz, U., & Tombul, I.",
-                    "venue": "19th International Symposium Communication in Millennium, 2022",
+                    "venue": "19th International Symposium Communication in Millennium",
+                    "year": 2022,
                     "doi": ""
                 }
             ]

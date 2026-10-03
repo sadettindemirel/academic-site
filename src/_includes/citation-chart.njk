@@ -1,0 +1,32 @@
+{# Citations per year from Google Scholar (src/_data/metrics.json → scholar.by_year). Pure HTML/CSS columns. #}
+{% set series = metrics.scholar.by_year %}
+{% if series and series.length %}
+{% set ticks = series | chartTicks("citations") %}
+{% set axisMax = ticks | last %}
+{% set currentYear = metrics.updated.slice(0, 4) | int %}
+<figure class="cite-chart">
+    <figcaption class="cite-chart-title">
+        <span data-tr="Yıllara göre atıflar" data-en="Citations per year">Yıllara göre atıflar</span>
+        <span class="cite-chart-source">Google Scholar</span>
+    </figcaption>
+    <div class="cite-chart-plot">
+        {% for t in ticks %}
+        <div class="cite-chart-grid" aria-hidden="true" style="bottom: {{ (t / axisMax * 100) | round(2) }}%"><span>{{ t }}</span></div>
+        {% endfor %}
+        <ol class="cite-chart-bars">
+            {% for d in series %}
+            {% set partial = d.year == currentYear %}
+            <li class="cite-chart-col{% if partial %} is-partial{% endif %}" tabindex="0">
+                <span class="cite-chart-bar" aria-hidden="true" style="height: {{ (d.citations / axisMax * 100) | round(2) }}%"></span>
+                {% if loop.last or loop.revindex == 2 %}<span class="cite-chart-value" aria-hidden="true" style="bottom: {{ (d.citations / axisMax * 100) | round(2) }}%">{{ d.citations }}</span>{% endif %}
+                <span class="cite-chart-tip" data-tr="{{ d.year }}: {{ d.citations }} atıf{% if partial %} (devam eden yıl){% endif %}" data-en="{{ d.year }}: {{ d.citations }} citations{% if partial %} (year to date){% endif %}">{{ d.year }}: {{ d.citations }} atıf{% if partial %} (devam eden yıl){% endif %}</span>
+                <span class="cite-chart-year" aria-hidden="true">{{ d.year }}</span>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% if (series | last).year == currentYear %}
+    <p class="cite-chart-note" data-tr="Soluk sütun: {{ currentYear }} yılı henüz tamamlanmadı." data-en="Faded column: {{ currentYear }} is year to date.">Soluk sütun: {{ currentYear }} yılı henüz tamamlanmadı.</p>
+    {% endif %}
+</figure>
+{% endif %}

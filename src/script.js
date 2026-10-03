@@ -11,12 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
 
-    // Load saved theme (supports legacy values gracefully)
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    const isDark = savedTheme.includes('dark');
-    const currentTheme = isDark ? 'dark' : 'light';
-    html.setAttribute('data-theme', currentTheme);
-    localStorage.setItem('theme', currentTheme);
+    // Theme is applied by the inline script in <head> before first paint (no light flash);
+    // here we only sync the toggle icon. Until the visitor picks one, the system setting is followed.
+    const currentTheme = html.getAttribute('data-theme');
     if (themeToggle) {
         updateThemeIcon(currentTheme);
     }

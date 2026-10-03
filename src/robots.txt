@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /tesekkurler/
+
+Sitemap: https://sadettindemirel.com/sitemap.xml

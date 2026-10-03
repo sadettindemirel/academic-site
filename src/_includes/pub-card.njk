@@ -1,0 +1,17 @@
+{% if pub.doi %}
+<a href="{{ pub.doi }}" target="_blank" rel="noopener noreferrer" class="pub-card pub-card-link">
+{% else %}
+<div class="pub-card">
+{% endif %}
+    <div class="pub-card-content">
+        {% if pub.year %}<span class="pub-year">{{ pub.year }}</span>{% endif %}
+        <h3 class="pub-title">{{ pub.title }}</h3>
+        <p class="pub-authors">{{ pub.authors }}</p>
+        <p class="pub-venue">{{ pub.venue }}</p>
+    </div>
+{% if pub.doi %}
+    <span class="pub-doi-badge"><i class="fas fa-external-link-alt"></i> DOI</span>
+</a>
+{% else %}
+</div>
+{% endif %}

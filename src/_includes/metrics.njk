@@ -1,0 +1,32 @@
+<div class="metrics">
+    {% for source in [
+        { key: "scopus", name: "Scopus", icon: "fas fa-chart-bar" },
+        { key: "scholar", name: "Google Scholar", icon: "fas fa-graduation-cap" }
+    ] %}
+    {% set m = metrics[source.key] %}
+    {% if m.citations %}
+    <a href="{{ m.url }}" class="metric-card" target="_blank" rel="noopener noreferrer">
+        <span class="metric-source"><i class="{{ source.icon }}"></i> {{ source.name }}</span>
+        <div class="metric-values">
+            <div class="metric">
+                <span class="metric-number">{{ m.citations }}</span>
+                <span class="metric-label" data-tr="Atıf" data-en="Citations">Atıf</span>
+            </div>
+            {% if m.documents %}
+            <div class="metric">
+                <span class="metric-number">{{ m.documents }}</span>
+                <span class="metric-label" data-tr="Doküman" data-en="Documents">Doküman</span>
+            </div>
+            {% endif %}
+            {% if m.h_index %}
+            <div class="metric">
+                <span class="metric-number">{{ m.h_index }}</span>
+                <span class="metric-label" data-tr="h-indeks" data-en="h-index">h-indeks</span>
+            </div>
+            {% endif %}
+        </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>
+<p class="metrics-updated" data-tr="Son güncelleme: {{ metrics.updated | trDate }}" data-en="Last updated: {{ metrics.updated | enDate }}">Son güncelleme: {{ metrics.updated | trDate }}</p>
