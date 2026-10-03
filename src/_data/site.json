@@ -97,7 +97,7 @@
   ],
   "name": "Sadettin Demirel",
   "greeting_en": "Hello, I am",
-  "bio_summary": "Yeni medya, sosyal ağlar, veri gazeteciliği, programlamalı sosyal bilimler, metin madenciliği ve duygu analizi alanlarında akademik çalışmalar yürütüyorum.",
+  "bio_summary": "Hesaplamalı sosyal bilimler yöntemleriyle (metin madenciliği, duygu analizi) yeni medya, veri gazeteciliği, yapay zekâ, dezenformasyon ve haber medyasında temsil üzerine çalışıyorum.",
   "title_en": "Assistant Professor",
   "about_paragraphs_en": [
     "Sadettin Demirel completed his undergraduate studies at Kadir Has University, Department of Public Relations and Publicity, in 2016. He received his first master's degree from the New Media Department at Kadir Has University in 2018.",
@@ -108,7 +108,7 @@
   "about_paragraphs": [
     "Sadettin Demirel, lisans eğitimini Kadir Has Üniversitesi Halkla İlişkiler ve Tanıtım Bölümü'nde, 2016 yılında tamamlamıştır. İlk yüksek lisans derecesini, Kadir Has Üniversitesi Yeni Medya Bölümü'nde 2018 yılında almıştır.",
     "2019 yılında, İsveç Enstitüsü bursiyeri olarak, Gothenburg Üniversitesi'nde Araştırmacı Gazetecilik alanında ikinci yüksek lisans eğitimini tamamlamıştır. 2023 yılında, İstanbul Üniversitesi Gazetecilik Doktora Ana Bilim Dalı'nda 'Twitter'daki Haberlerde Duygular ve Kullanıcı Etkileşimleri Arasındaki İlişkinin Çözümlenmesi: Çok Yöntemli Bir Çalışma' başlıklı araştırmasıyla doktor unvanı almıştır.",
-    "Yeni medya, metin madenciliği, programlamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
+    "Yeni medya, metin madenciliği, hesaplamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
     "Sivil toplum faaliyetlerine de aktif bir katılım gösteren Demirel, Türkiye'de veri okuryazarlığını teşvik etmek, veri gazeteciliği ve açık veri faaliyetlerini desteklemek amacıyla kurulan İstanbul merkezli Veri Okuryazarlığı Derneği'nin (VOYD) kurucusu ve yönetim kurulu üyesi olarak çalışmalarını sürdürmektedir."
   ],
   "writings": [
@@ -142,7 +142,7 @@
   ],
   "title": "Dr. Öğr. Üyesi",
   "greeting": "Merhaba, ben",
-  "bio_summary_en": "I conduct academic research on new media, social networks, data journalism, computational social science, text mining and sentiment analysis.",
+  "bio_summary_en": "Using computational social science methods such as text mining and sentiment analysis, I study new media, data journalism, artificial intelligence, disinformation and media representation.",
   "email": "sadettin.demirel@uskudar.edu.tr",
   "career": [
     {
