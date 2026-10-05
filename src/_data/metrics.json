@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03",
+  "updated": "2026-10-05",
   "scholar": {
     "citations": 219,
     "h_index": 8,
@@ -42,9 +42,9 @@
     ]
   },
   "scopus": {
-    "citations": null,
-    "h_index": null,
-    "documents": null,
+    "citations": 149,
+    "h_index": 7,
+    "documents": 11,
     "url": "https://www.scopus.com/authid/detail.uri?authorId=57221689330"
   }
 }

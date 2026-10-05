@@ -1,5 +1,7 @@
 {# Citations per year from Google Scholar (src/_data/metrics.json → scholar.by_year). Pure HTML/CSS columns. #}
-{% set series = metrics.scholar.by_year %}
+{% set chartStartYear = 2023 %}
+{% set series = [] %}
+{% for d in metrics.scholar.by_year %}{% if d.year >= chartStartYear %}{% set _ = series.push(d) %}{% endif %}{% endfor %}
 {% if series and series.length %}
 {% set ticks = series | chartTicks("citations") %}
 {% set axisMax = ticks | last %}
