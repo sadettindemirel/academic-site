@@ -27,6 +27,40 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(bar);
     });
 
+    // Blog banner: auto-rotating carousel over a scroll-snap track (works by swipe/scroll without JS)
+    const banner = document.querySelector('.blog-banner');
+    if (banner) {
+        const track = banner.querySelector('.banner-track');
+        const slides = [...track.children];
+        const dots = [...banner.querySelectorAll('.banner-dot')];
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let paused = false;
+
+        const current = () => Math.round(track.scrollLeft / track.clientWidth);
+        const goTo = i => track.scrollTo({
+            left: ((i + slides.length) % slides.length) * track.clientWidth,
+            behavior: reduceMotion.matches ? 'auto' : 'smooth'
+        });
+        const sync = () => dots.forEach((d, i) => d.classList.toggle('active', i === current()));
+
+        track.addEventListener('scroll', sync, { passive: true });
+        dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+        banner.querySelector('.banner-prev').addEventListener('click', () => goTo(current() - 1));
+        banner.querySelector('.banner-next').addEventListener('click', () => goTo(current() + 1));
+        window.addEventListener('resize', () => goTo(current()));
+        sync();
+
+        ['mouseenter', 'focusin'].forEach(e => banner.addEventListener(e, () => { paused = true; }, { passive: true }));
+        // Touch has no "leave" event: resume a few seconds after the finger lifts
+        let resume;
+        banner.addEventListener('touchstart', () => { paused = true; clearTimeout(resume); }, { passive: true });
+        banner.addEventListener('touchend', () => { resume = setTimeout(() => { paused = false; }, 8000); }, { passive: true });
+        ['mouseleave', 'focusout'].forEach(e => banner.addEventListener(e, () => { paused = false; }));
+        setInterval(() => {
+            if (!paused && !reduceMotion.matches && !document.hidden) goTo(current() + 1);
+        }, 5000);
+    }
+
     // Set Current Year in Footer
     const yearSpan = document.getElementById('currentYear');
     if (yearSpan) {

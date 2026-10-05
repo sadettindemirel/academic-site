@@ -79,17 +79,6 @@ collections:
               - { label: "Etiket", name: "label", widget: "string" }
               - { label: "Grup", name: "group", widget: "select", options: [{ label: "Sosyal (yuvarlak ikon)", value: "social" }, { label: "Akademik profil (etiketli buton)", value: "academic" }], default: "social" }
               - { label: "Ana sayfada göster", name: "hero", widget: "boolean", default: true, hint: "Kapalıysa sadece alt bilgide (footer) görünür" }
-          - label: "Yazı Platformları"
-            name: "writings"
-            widget: "list"
-            fields:
-              - { label: "Platform Adı", name: "name", widget: "string" }
-              - { label: "Açıklama (TR)", name: "description", widget: "text" }
-              - { label: "Açıklama (EN)", name: "description_en", widget: "text" }
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "İkon (CSS class)", name: "icon", widget: "string", hint: "Örn: fab fa-medium" }
-              - { label: "Buton Metni (TR)", name: "button_text", widget: "string" }
-              - { label: "Buton Metni (EN)", name: "button_text_en", widget: "string" }
 
   - name: "metrics"
     label: "Atıf Metrikleri"

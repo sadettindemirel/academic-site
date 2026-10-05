@@ -6,17 +6,39 @@ description: Dr. Sadettin Demirel'in yeni medya, veri gazeteciliği ve programla
 nav: blog
 ---
         <section class="blog-listing section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Blog</h2>
-                    <div class="divider"></div>
+            <div class="container container-wide">
+                <h1 class="blog-eyebrow">Blog</h1>
+
+                {% set featured = collections.blog.slice(0, 5) %}
+                <div class="blog-banner" role="region" aria-roledescription="carousel" aria-label="Son yazılar">
+                    <div class="banner-track">
+                        {% for post in featured %}
+                        <a href="{{ post.url }}" class="banner-slide" aria-label="{{ loop.index }} / {{ featured.length }}">
+                            <div class="banner-image">
+                                <img src="{{ post.data.thumbnail }}" alt="" {% if not loop.first %}loading="lazy"{% endif %}>
+                            </div>
+                            <div class="banner-caption">
+                                <span class="banner-date">{{ post.data.date | trDate }}</span>
+                                <h2 class="banner-title">{{ post.data.title }}</h2>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <button type="button" class="banner-arrow banner-prev" aria-label="Önceki yazı"><i class="fas fa-chevron-left"></i></button>
+                    <button type="button" class="banner-arrow banner-next" aria-label="Sonraki yazı"><i class="fas fa-chevron-right"></i></button>
+                    <div class="banner-dots">
+                        {% for post in featured %}
+                        <button type="button" class="banner-dot" aria-label="{{ loop.index }}. yazı"></button>
+                        {% endfor %}
+                    </div>
                 </div>
+
                 <div class="blog-grid">
-                    {% for post in collections.blog %}
+                    {% for post in collections.blog.slice(5) %}
                     <a href="{{ post.url }}" class="blog-card">
                         {% if post.data.thumbnail %}
                         <div class="blog-card-image">
-                            <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" loading="lazy">
+                            <img src="{{ post.data.thumbnail }}" alt="" loading="lazy">
                         </div>
                         {% endif %}
                         <div class="blog-card-body">
@@ -26,28 +48,6 @@ nav: blog
                             <span class="blog-card-read" data-tr="Devamını Oku" data-en="Read More">Devamını Oku <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
-                    {% endfor %}
-                </div>
-
-                <!-- Yazılarım Section (moved from main page) -->
-                <hr class="section-divider">
-                <div class="section-header" style="margin-top: var(--spacing-lg);">
-                    <h2 class="section-title" data-tr="Yazılarım" data-en="My Writings">Yazılarım</h2>
-                    <div class="divider"></div>
-                </div>
-                <div class="writings-content">
-                    {% for writing in site.writings %}
-                    <div class="writing-promo">
-                        <div class="writing-icon">
-                            <i class="{{ writing.icon }}"></i>
-                        </div>
-                        <h3>{{ writing.name }}</h3>
-                        <p data-tr="{{ writing.description }}" data-en="{{ writing.description_en }}">{{ writing.description }}</p>
-                        <a href="{{ writing.url }}" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-outline mt-auto">
-                            <span data-tr="{{ writing.button_text }}" data-en="{{ writing.button_text_en }}">{{ writing.button_text }}</span> <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
                     {% endfor %}
                 </div>
             </div>

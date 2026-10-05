@@ -111,35 +111,6 @@
     "Yeni medya, metin madenciliği, hesaplamalı sosyal bilimler, duygu analizi, sosyal ağlar ve veri gazeteciliği gibi konular ilgi duyduğu akademik çalışma alanlarıdır.",
     "Sivil toplum faaliyetlerine de aktif bir katılım gösteren Demirel, Türkiye'de veri okuryazarlığını teşvik etmek, veri gazeteciliği ve açık veri faaliyetlerini desteklemek amacıyla kurulan İstanbul merkezli Veri Okuryazarlığı Derneği'nin (VOYD) kurucusu ve yönetim kurulu üyesi olarak çalışmalarını sürdürmektedir."
   ],
-  "writings": [
-    {
-      "name": "Medium",
-      "description": "Veri gazeteciliği ve açık veri üzerine güncel yazılarım ve analizlerim.",
-      "description_en": "My articles and analyses on data journalism and open data.",
-      "url": "https://medium.com/verijurnali",
-      "icon": "fab fa-medium",
-      "button_text": "Veri Jurnali",
-      "button_text_en": "Veri Jurnali"
-    },
-    {
-      "name": "NewsLabTurkey",
-      "description": "NewsLabTurkey platformundaki gazetecilik ve medya üzerine yazılarım.",
-      "description_en": "My articles on journalism and media at the NewsLabTurkey platform.",
-      "url": "https://www.newslabturkey.org/author/sadettindemirel/",
-      "icon": "fas fa-newspaper",
-      "button_text": "Yazılarıma Git",
-      "button_text_en": "Read Articles"
-    },
-    {
-      "name": "VOYD",
-      "description": "Veri Okuryazarlığı Derneği blogundaki değerlendirmelerim ve çalışmalarım.",
-      "description_en": "My evaluations and work on the Data Literacy Association blog.",
-      "url": "https://voyd.org.tr/author/sadettin/",
-      "icon": "fas fa-chart-line",
-      "button_text": "Yazılarıma Git",
-      "button_text_en": "Read Articles"
-    }
-  ],
   "title": "Dr. Öğr. Üyesi",
   "greeting": "Merhaba, ben",
   "bio_summary_en": "Using computational social science methods such as text mining and sentiment analysis, I study new media, data journalism, artificial intelligence, disinformation and media representation.",

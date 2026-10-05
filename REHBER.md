@@ -72,7 +72,7 @@ Teknoloji:
 Sayfalar:
 - / → Ana sayfa (Hakkımda, Özgeçmiş/Kariyer, İletişim)
 - /publications/ → Yayınlar (ayrı sayfa, DOI linkleri)
-- /blog/ → Blog listesi + Yazılarım bölümü (yatay çizgiyle ayrı)
+- /blog/ → Blog (son 5 yazılık dönen banner + 3 sütunlu yazı listesi)
 - /blog/[slug]/ → Blog yazısı sayfası
 - /admin/ → Decap CMS paneli
 
